@@ -1,0 +1,8 @@
+{
+  "version": "1.0.0",
+  "download_url": "https://github.com/Brusko25/Glance-Usage-Releases/releases/download/v1.0.0/Glance-Usage-v1.0.0-Windows.zip",
+  "installer_url": "https://github.com/Brusko25/Glance-Usage-Releases/releases/download/v1.0.0/Glance-Usage-v1.0.0-Setup.exe",
+  "installer_sha256": "2827785b976114face407675b8590e46c0d63989472e5b1cb5bd017fbdb3026d",
+  "changelog": "Initial release: compact Codex and Claude usage monitoring, first-run account setup, Windows installer and portable ZIP. Updates are manual.",
+  "sha256": "e08e44cbe67d1f73cf004487355debdfd7f7b214aac5f9efb4f6e0a10dbd4f65"
+}
