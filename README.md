@@ -6,9 +6,17 @@ A tiny Windows desktop widget for **Codex, Codex Spark, and Claude usage**. True
 
 ## Screenshots
 
-Glance Usage 1.0.0 widget with illustrative usage values. Each installation connects to its owner's accounts. Click any image to see it full size.
+Glance Usage 1.0.1, captured from the release build with illustrative values and offline account setup. Each installation connects to its owner's accounts. Click an image to see it full size.
 
-<a href="images/v1.0.0/widget.png"><img src="images/v1.0.0/widget.png" alt="Glance Usage widget with illustrative provider usage and reset countdowns" width="236"></a>
+<a href="images/v1.0.1/widget.png"><img src="images/v1.0.1/widget.png" alt="Glance Usage 1.0.1 widget with sample usage and reset countdowns" width="236"></a>
+
+Account setup (offline preview):
+
+<a href="images/v1.0.1/setup.png"><img src="images/v1.0.1/setup.png" alt="Glance Usage 1.0.1 account setup with optional providers" width="550"></a>
+
+New usage-gauge icon, extracted from the release executable:
+
+<a href="images/v1.0.1/app-icon.png"><img src="images/v1.0.1/app-icon.png" alt="Mint-and-lavender Glance Usage application icon" width="32"></a>
 
 ## Get started
 

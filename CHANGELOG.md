@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.1 — 2026-09-13
+
+- New mint-and-lavender usage-gauge icon for the application, system tray, Windows shortcuts, and installer.
+- The icon is embedded in the executable, so installed and portable copies need no separate icon file.
+
 ## 1.0.0 — 2026-09-13
 
 - First public Windows release: compact, borderless widget with a true-black background.
