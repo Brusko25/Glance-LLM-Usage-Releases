@@ -4,9 +4,11 @@ A tiny Windows desktop widget for **Codex, Codex Spark, and Claude usage**. True
 
 **[Download the Windows installer](https://github.com/Brusko25/Glance-Usage-Releases/releases/latest)** · **[Setup guide](USER_GUIDE.md)** · **[Changelog](CHANGELOG.md)** · **[Report an issue](https://github.com/Brusko25/Glance-Usage-Releases/issues)**
 
-![Glance Usage widget with illustrative usage values](images/widget.png)
+## Screenshots
 
-*Illustrative values; each installation connects to its owner's accounts.*
+Glance Usage 1.0.0 widget with illustrative usage values. Each installation connects to its owner's accounts. Click any image to see it full size.
+
+<a href="images/v1.0.0/widget.png"><img src="images/v1.0.0/widget.png" alt="Glance Usage widget with illustrative provider usage and reset countdowns" width="236"></a>
 
 ## Get started
 
