@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.2 — 2026-09-14
+
+- Renamed the Codex, Spark, and Claude usage widget to Glance LLM Usage. Corrected app branding, installers, documentation, and repository links. Existing settings and provider choices are preserved. Updates remain manual.
+- New installations use a distinct Glance LLM Usage Widget folder and shortcuts to avoid the mistakenly named finance 2.4.0 installation. The executable remains GlanceUsage.exe for compatibility.
+
 ## 1.0.1 — 2026-09-13
 
 - New mint-and-lavender usage-gauge icon for the application, system tray, Windows shortcuts, and installer.

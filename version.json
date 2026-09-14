@@ -1,7 +1,7 @@
 {
   "version": "1.0.1",
-  "download_url": "https://github.com/Brusko25/Glance-Usage-Releases/releases/download/v1.0.1/Glance-Usage-v1.0.1-Windows.zip",
-  "installer_url": "https://github.com/Brusko25/Glance-Usage-Releases/releases/download/v1.0.1/Glance-Usage-v1.0.1-Setup.exe",
+  "download_url": "https://github.com/Brusko25/Glance-LLM-Usage-Releases/releases/download/v1.0.1/Glance-Usage-v1.0.1-Windows.zip",
+  "installer_url": "https://github.com/Brusko25/Glance-LLM-Usage-Releases/releases/download/v1.0.1/Glance-Usage-v1.0.1-Setup.exe",
   "installer_sha256": "9069c3174d5af8b820131b863272e93701c925f810fec02fe47704a636f4b442",
   "changelog": "New mint-and-lavender usage-gauge icon for the app, system tray, shortcuts, and Windows installer. Updates are manual.",
   "sha256": "204edf93f740c4d48a8f06f4093266d6b470ccbb699b57818289a609ae253d8d"

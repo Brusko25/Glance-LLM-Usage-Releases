@@ -1,6 +1,6 @@
-# Glance Usage setup and user guide
+# Glance LLM Usage setup and user guide
 
-Glance Usage is a small Windows desktop widget for your own Codex and Claude subscription limits. It shows percentages remaining (or used), progress bars, and reset countdowns. All options are under right-click.
+Glance LLM Usage is a small Windows desktop widget for your own Codex and Claude subscription limits. It shows percentages remaining (or used), progress bars, and reset countdowns. All options are under right-click.
 
 ## Requirements
 
@@ -9,26 +9,26 @@ Glance Usage is a small Windows desktop widget for your own Codex and Claude sub
 - For Claude: the Claude desktop app, signed in on this Windows user profile, with a plan that reports five-hour and weekly usage.
 - An internet connection for fresh usage reads.
 
-You can monitor either provider or both. Install the provider apps from their official websites: [Codex](https://openai.com/codex/) and [Claude desktop](https://claude.ai/download). A browser-only Claude sign-in is not enough for this version. No API key, payment information, token, or password is entered into Glance Usage.
+You can monitor either provider or both. Install the provider apps from their official websites: [Codex](https://openai.com/codex/) and [Claude desktop](https://claude.ai/download). A browser-only Claude sign-in is not enough for this version. No API key, payment information, token, or password is entered into Glance LLM Usage.
 
 ## Install
 
-1. Download **Glance-Usage-v1.0.1-Setup.exe** from the [latest release](https://github.com/Brusko25/Glance-Usage-Releases/releases/latest).
-2. Run the installer. It installs for your Windows account without requiring administrator access, normally in `%LOCALAPPDATA%\Programs\Glance Usage`.
+1. Download **Glance-LLM-Usage-v1.0.2-Setup.exe** from the [latest release](https://github.com/Brusko25/Glance-LLM-Usage-Releases/releases/latest).
+2. Run the installer. It installs for your Windows account without requiring administrator access, normally in `%LOCALAPPDATA%\Programs\Glance LLM Usage Widget`.
 3. Choose optional desktop and Windows sign-in startup shortcuts if wanted.
-4. Open Glance Usage from the final installer page or Start menu. Complete Account setup.
+4. Open Glance LLM Usage from the final installer page or Start menu. Complete Account setup.
 
 The app and installer are unsigned; Windows can identify the publisher as unknown. The release includes `SHA256SUMS.txt` for checking download integrity.
 
-For a portable copy, download **Glance-Usage-v1.0.1-Windows.zip**, extract all four files to a writable folder, and run `GlanceUsage.exe`. No compiler or developer tools are needed for either download. Avoid protected folders such as Program Files for a portable copy.
+For a portable copy, download **Glance-LLM-Usage-v1.0.2-Windows.zip**, extract all four files to a writable folder, and run `GlanceUsage.exe`. No compiler or developer tools are needed for either download. Avoid protected folders such as Program Files for a portable copy.
 
 ## Connect your accounts
 
 On the first launch, **Account setup** appears before any usage request.
 
-**Codex:** leave “Monitor Codex and Spark” checked if you want those limits. Sign in to the Codex app with your ChatGPT account. Glance Usage detects the desktop executable or a `codex.exe` on PATH. If detection fails, use Browse to select your installed `codex.exe`. An API-key-only Codex login does not provide ChatGPT subscription quotas.
+**Codex:** leave “Monitor Codex and Spark” checked if you want those limits. Sign in to the Codex app with your ChatGPT account. Glance LLM Usage detects the desktop executable or a `codex.exe` on PATH. If detection fails, use Browse to select your installed `codex.exe`. An API-key-only Codex login does not provide ChatGPT subscription quotas.
 
-**Claude:** first open Claude desktop and sign in. Check “Allow Claude usage reads using my desktop sign-in” only if you want Claude monitoring. This starts unchecked for every fresh download. Checking it authorizes Glance Usage to decrypt that Windows user's saved Claude sign-in locally and use it only with Anthropic's usage endpoint. It never saves a copy of the credential or changes Claude's authentication files. Claude manages sign-in renewal.
+**Claude:** first open Claude desktop and sign in. Check “Allow Claude usage reads using my desktop sign-in” only if you want Claude monitoring. This starts unchecked for every fresh download. Checking it authorizes Glance LLM Usage to decrypt that Windows user's saved Claude sign-in locally and use it only with Anthropic's usage endpoint. It never saves a copy of the credential or changes Claude's authentication files. Claude manages sign-in renewal.
 
 Leave both optional paths blank for automatic detection. If using a nonstandard Claude install, browse to its desktop data folder containing `config.json` and `Local State`. Default locations are:
 
@@ -49,7 +49,7 @@ Select **Save & open**. Your selected providers appear in the widget. You can ch
 | Change connections | Right-click → Account setup |
 | Change opacity | Right-click → Opacity |
 | Hide | Escape, or right-click → Hide to tray |
-| Show again | Double-click the tray icon, or launch Glance Usage again |
+| Show again | Double-click the tray icon, or launch Glance LLM Usage again |
 | Quit | Right-click → Exit |
 
 ## Refresh and meaning
@@ -67,7 +67,7 @@ Codex reports the windows available for that account; a weekly-only limit is nor
 ## Troubleshooting
 
 - **Codex offline:** open Codex, check your ChatGPT sign-in and internet connection, then refresh. Use the optional executable path if detection fails.
-- **Claude sign-in unavailable or expired:** open Claude desktop and use the signed-in app so it can renew its credential, then allow the next retry. Glance Usage never rotates Claude's tokens itself.
+- **Claude sign-in unavailable or expired:** open Claude desktop and use the signed-in app so it can renew its credential, then allow the next retry. Glance LLM Usage never rotates Claude's tokens itself.
 - **Multiple Claude organizations:** the widget will not silently select among multiple eligible organizations. Use the intended account in Claude; multi-organization selection is not supported in this release.
 - **Cooldown/stale:** wait for the provider's cooldown. Repeated refresh clicks do not bypass it.
 - **Cannot save settings:** move the portable copy to a writable folder, or use the per-user installer.
@@ -81,6 +81,8 @@ Advanced environment overrides `GLANCE_CODEX_PATH` and `GLANCE_CLAUDE_DATA_DIR` 
 
 For an update, exit the widget and run the newer installer, or replace the executable and documents from a newer portable ZIP. The release payload contains no configuration files; upgrades retain yours. Back up the two JSON files if you want to preserve settings before moving the app.
 
-Uninstall through Windows Installed apps. It removes program files and installer-created shortcuts, while retaining your two configuration files. Delete the remaining Glance Usage installation folder yourself if you also want to remove those preferences. Your Codex and Claude accounts are unaffected.
+Uninstall through Windows Installed apps. It removes program files and installer-created shortcuts, while retaining your two configuration files. Delete the remaining Glance LLM Usage installation folder yourself if you also want to remove those preferences. Your Codex and Claude accounts are unaffected.
 
-Downloads and support: [Glance Usage Releases](https://github.com/Brusko25/Glance-Usage-Releases). When reporting a problem, include the app version and the error shown on hover; never include credentials, provider data folders, or tokens.
+Downloads and support: [Glance LLM Usage Releases](https://github.com/Brusko25/Glance-LLM-Usage-Releases). When reporting a problem, include the app version and the error shown on hover; never include credentials, provider data folders, or tokens.
+
+Version 1.0.2 renames Glance Usage to Glance LLM Usage. Existing installations retain their previous folder and settings; the executable remains GlanceUsage.exe. New installations and shortcuts use Glance LLM Usage Widget to keep them separate from the finance app that was mistakenly branded Glance LLM Usage in version 2.4.0. Use the usage widget installer only for this app. Installer upgrades preserve the existing startup selection.
