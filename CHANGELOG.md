@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.3 — 2026-09-15
+
+- Detect newer stable releases at startup and daily; add manual update checks and optional links to the product download page.
+
 ## 1.0.2 — 2026-09-14
 
 - Renamed the Codex, Spark, and Claude usage widget to Glance LLM Usage. Corrected app branding, installers, documentation, and repository links. Existing settings and provider choices are preserved. Updates remain manual.

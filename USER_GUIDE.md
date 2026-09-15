@@ -13,14 +13,14 @@ You can monitor either provider or both. Install the provider apps from their of
 
 ## Install
 
-1. Download **Glance-LLM-Usage-v1.0.2-Setup.exe** from the [latest release](https://github.com/Brusko25/Glance-LLM-Usage-Releases/releases/latest).
+1. Download **Glance-LLM-Usage-v1.0.3-Setup.exe** from the [latest release](https://github.com/Brusko25/Glance-LLM-Usage-Releases/releases/latest).
 2. Run the installer. It installs for your Windows account without requiring administrator access, normally in `%LOCALAPPDATA%\Programs\Glance LLM Usage Widget`.
 3. Choose optional desktop and Windows sign-in startup shortcuts if wanted.
 4. Open Glance LLM Usage from the final installer page or Start menu. Complete Account setup.
 
 The app and installer are unsigned; Windows can identify the publisher as unknown. The release includes `SHA256SUMS.txt` for checking download integrity.
 
-For a portable copy, download **Glance-LLM-Usage-v1.0.2-Windows.zip**, extract all four files to a writable folder, and run `GlanceUsage.exe`. No compiler or developer tools are needed for either download. Avoid protected folders such as Program Files for a portable copy.
+For a portable copy, download **Glance-LLM-Usage-v1.0.3-Windows.zip**, extract all four files to a writable folder, and run `GlanceUsage.exe`. No compiler or developer tools are needed for either download. Avoid protected folders such as Program Files for a portable copy.
 
 ## Connect your accounts
 
@@ -86,3 +86,8 @@ Uninstall through Windows Installed apps. It removes program files and installer
 Downloads and support: [Glance LLM Usage Releases](https://github.com/Brusko25/Glance-LLM-Usage-Releases). When reporting a problem, include the app version and the error shown on hover; never include credentials, provider data folders, or tokens.
 
 Version 1.0.2 renames Glance Usage to Glance LLM Usage. Existing installations retain their previous folder and settings; the executable remains GlanceUsage.exe. New installations and shortcuts use Glance LLM Usage Widget to keep them separate from the finance app that was mistakenly branded Glance LLM Usage in version 2.4.0. Use the usage widget installer only for this app. Installer upgrades preserve the existing startup selection.
+
+
+## Checking for new versions
+
+The app checks its public GitHub releases shortly after startup and daily. Choose **Check for updates** from the widget or tray menu to check immediately. When a newer stable version is available, you can open the release page. Downloads and installation remain manual; update checks send no account credentials or workspace data.
