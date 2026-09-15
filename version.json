@@ -1,8 +1,8 @@
 {
-  "version": "1.0.2",
-  "download_url": "https://github.com/Brusko25/Glance-LLM-Usage-Releases/releases/download/v1.0.2/Glance-LLM-Usage-v1.0.2-Windows.zip",
-  "installer_url": "https://github.com/Brusko25/Glance-LLM-Usage-Releases/releases/download/v1.0.2/Glance-LLM-Usage-v1.0.2-Setup.exe",
-  "installer_sha256": "fc6bc97587bd52fac795907648d2ee2b2ea3048c27c8336980806988771d3836",
-  "changelog": "Renamed the Codex, Spark, and Claude usage widget to Glance LLM Usage. Corrected app branding, installers, documentation, and repository links. Existing settings and provider choices are preserved. Updates remain manual.",
-  "sha256": "8376d22a16c806934dfaaae45d9982bf3ed293dd803b7d80ccc5d78fc65332a3"
+  "version": "1.0.3",
+  "download_url": "https://github.com/Brusko25/Glance-LLM-Usage-Releases/releases/download/v1.0.3/Glance-LLM-Usage-v1.0.3-Windows.zip",
+  "installer_url": "https://github.com/Brusko25/Glance-LLM-Usage-Releases/releases/download/v1.0.3/Glance-LLM-Usage-v1.0.3-Setup.exe",
+  "installer_sha256": "49241251f5950f0e5abcea1125863eb9211c8ff7ea66fc9a11f7f0a0e1a29e25",
+  "changelog": "Detect newer stable releases at startup and daily, with manual checks and optional links to downloads. Installation remains manual and existing settings are preserved.",
+  "sha256": "935b6ec6e0c1b3d0f85d234baebccb0583766767764128839150c145e2291ae8"
 }
