@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.0.1 — 2026-09-21
+
+- Keep right-click and tray menus to Options, Refresh, Show/Hide, and Exit. All settings now live in Options.
+- Place used percentages and opacity in Appearance, account setup and refresh timing in Accounts, on-demand usage details in Overview, setup help in Support, and update controls in Updates.
+- Remove repeated update buttons, navigation shortcuts, website lists, and explanatory cards. Preserve settings and provider connections.
+
+
 ## 2.0.0 — 2026-09-21
 
 - Remove the repeated page headings below all six Options tabs. The selected tab identifies the page and content starts directly beneath navigation.

@@ -13,18 +13,18 @@ No API key or developer billing setup is needed. Chat subscriptions and develope
 
 ## Install
 
-1. Download **Glance-LLM-Usage-v2.0.0-Setup.exe** from the [latest release](https://github.com/Brusko25/Glance-LLM-Usage-Releases/releases/latest).
+1. Download **Glance-LLM-Usage-v2.0.1-Setup.exe** from the [latest release](https://github.com/Brusko25/Glance-LLM-Usage-Releases/releases/latest).
 2. Run the installer. It installs for your Windows account without requiring administrator access, normally in `%LOCALAPPDATA%\Programs\Glance LLM Usage`.
 3. Choose optional desktop and Windows sign-in startup shortcuts if wanted.
 4. Open Glance LLM Usage from the final installer page or Start menu. Complete Account setup.
 
 The app and installer are unsigned; Windows can identify the publisher as unknown. The release includes `SHA256SUMS.txt` for checking download integrity.
 
-For a portable copy, download **Glance-LLM-Usage-v2.0.0-Windows.zip**, extract all four files to a writable folder, and run `GlanceUsage.exe`. No compiler or developer tools are needed for either download. Avoid protected folders such as Program Files for a portable copy.
+For a portable copy, download **Glance-LLM-Usage-v2.0.1-Windows.zip**, extract all four files to a writable folder, and run `GlanceUsage.exe`. No compiler or developer tools are needed for either download. Avoid protected folders such as Program Files for a portable copy.
 
 ## Connect your accounts
 
-On first launch, **Manage providers** appears before any usage request. You can choose **Save and continue** with no connections and sign in later. Open **Options → Accounts → Manage providers** whenever you are ready.
+On first launch, **Manage providers** appears before any usage request. You can choose **Save and continue** with no connections and sign in later. Open **Options → Accounts → Account setup** whenever you are ready.
 
 ### ChatGPT / Codex browser sign-in
 
@@ -55,15 +55,17 @@ Existing installations keep their saved monitoring choices. Every fresh installa
 
 ## Controls
 
+The widget and tray share a short menu: **Options**, **Refresh now**, **Hide to tray / Show widget**, and **Exit**. Settings and help stay in Options.
+
 | Action | How |
 | --- | --- |
 | Move | Drag anywhere on the widget |
-| Keep above other windows | Right-click → Always on top |
-| Stop accidental movement | Right-click → Lock position |
-| Switch remaining/used | Right-click → Show used percentage |
+| Keep above other windows | Options → Desktop → Always on top |
+| Stop accidental movement | Options → Desktop → Lock widget position |
+| Switch remaining/used | Options → Appearance → Show used percentage |
 | Refresh | F5, or right-click → Refresh now |
-| Change connections | Right-click → Account setup |
-| Change opacity | Right-click → Opacity |
+| Change connections | Options → Accounts → Account setup |
+| Change opacity | Options → Appearance → Opacity |
 | Hide | Escape, or right-click → Hide to tray |
 | Show again | Double-click the tray icon, or launch Glance LLM Usage again |
 | Quit | Right-click → Exit |
@@ -74,7 +76,7 @@ Codex defaults to a fresh request every **15 seconds**. Claude uses a minimum of
 
 Server processing delays and network latency can add lag. The widget shows the last value the provider returned; it does not estimate token use or promise instant readings. Failed requests retry more slowly, and `Retry-After` cooldowns are respected even when Refresh now is clicked.
 
-Each provider updates independently. **STALE** means its previous reading is retained after a failure or delay. **OFFLINE** means there is no successful reading yet. Choose **Usage details** from the right-click menu to see connection details, each provider's last successful update, and exact reset dates in your local time zone.
+Each provider updates independently. **STALE** means its previous reading is retained after a failure or delay. **OFFLINE** means there is no successful reading yet. Choose **Options → Overview → Usage details** to see connection details, each provider's last successful update, and exact reset dates in your local time zone.
 
 Remaining is `100 − used percentage`. Missing values stay unavailable. A reset countdown reaching zero does not invent a fresh 100% quota; the next successful response must confirm it.
 
@@ -107,12 +109,12 @@ The application and shortcuts are named **Glance LLM Usage**. Existing installat
 
 Open Options from the desktop/Start menu shortcut, right-click → Options, double-click the widget, or press Ctrl+O while the widget has focus. Closing Options keeps monitoring running; Quit app exits both.
 
-- **Overview:** provider readings and quick actions.
-- **Accounts:** browser sign-in, saved provider websites, and optional existing desktop connections. A website shortcut never indicates a live connection.
+- **Overview:** live readings, Refresh usage, expandable Usage details, and saved provider websites.
+- **Accounts:** Account setup for browser sign-in, saved websites and optional desktop connections; Codex refresh timing. A website shortcut never indicates a live connection.
 - **Desktop:** always on top, position lock, monitor selection, reset position, startup and desktop shortcut controls.
-- **Appearance:** 75–200% widget sizing, Black/Graphite/Midnight backgrounds, Mint/Lavender/Amber Codex accents, 70–100% opacity, used/remaining percentages, and Codex refresh pace.
+- **Appearance:** 75–200% widget sizing, Black/Graphite/Midnight backgrounds, Mint/Lavender/Amber Codex accents, 70–100% opacity, used/remaining percentages.
 - **Updates:** automatic-check preference and in-app update installation.
-- **Support:** usage details with reset timestamps, setup guide, issues, and active settings folder.
+- **Support:** setup guide, issues, settings folder, and keyboard shortcuts.
 
 Controls are scrollable on smaller displays and scale with Windows display settings. Provider requests still honor minimum intervals and server cooldowns.
 

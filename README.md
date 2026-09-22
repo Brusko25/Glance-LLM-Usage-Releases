@@ -6,44 +6,48 @@ A compact Windows app for **subscription limits and your favorite AI providers**
 
 ## Screenshots
 
-Glance LLM Usage 2.0.0, captured from the actual release build with illustrative values and offline previews. Click any image for full size.
+Glance LLM Usage 2.0.1, captured from the actual release build with illustrative values and offline previews. Click any image for full size.
 
 Options overview:
 
-<a href="images/v2.0.0/options.png"><img src="images/v2.0.0/options.png" alt="Glance LLM Usage 2.0.0 — Options overview" width="960"></a>
+<a href="images/v2.0.1/options.png"><img src="images/v2.0.1/options.png" alt="Glance LLM Usage 2.0.1 — Options overview" width="960"></a>
 
 Provider accounts and supported connection types:
 
-<a href="images/v2.0.0/accounts.png"><img src="images/v2.0.0/accounts.png" alt="Glance LLM Usage 2.0.0 — Provider accounts and connection support" width="960"></a>
+<a href="images/v2.0.1/accounts.png"><img src="images/v2.0.1/accounts.png" alt="Glance LLM Usage 2.0.1 — Provider accounts and connection support" width="960"></a>
 
 Widget appearance controls:
 
-<a href="images/v2.0.0/appearance.png"><img src="images/v2.0.0/appearance.png" alt="Glance LLM Usage 2.0.0 — Appearance controls without a repeated heading" width="960"></a>
+<a href="images/v2.0.1/appearance.png"><img src="images/v2.0.1/appearance.png" alt="Glance LLM Usage 2.0.1 — Appearance controls without a repeated heading" width="960"></a>
 
 In-app updates:
 
-<a href="images/v2.0.0/updates.png"><img src="images/v2.0.0/updates.png" alt="Glance LLM Usage 2.0.0 — In-app updates" width="960"></a>
+<a href="images/v2.0.1/updates.png"><img src="images/v2.0.1/updates.png" alt="Glance LLM Usage 2.0.1 — In-app updates" width="960"></a>
 
 Compact desktop widget with sample usage:
 
-<a href="images/v2.0.0/widget.png"><img src="images/v2.0.0/widget.png" alt="Glance LLM Usage 2.0.0 — Compact desktop widget with sample usage" width="236"></a>
+<a href="images/v2.0.1/widget.png"><img src="images/v2.0.1/widget.png" alt="Glance LLM Usage 2.0.1 — Compact desktop widget with sample usage" width="236"></a>
 
-Offline account setup:
+Quick menu:
 
-<a href="images/v2.0.0/setup.png"><img src="images/v2.0.0/setup.png" alt="Glance LLM Usage 2.0.0 — Offline account setup" width="720"></a>
+<a href="images/v2.0.1/menu.png"><img src="images/v2.0.1/menu.png" alt="Glance LLM Usage 2.0.1 — Essential right-click and tray actions" width="150"></a>
+
+Help and setup:
+
+<a href="images/v2.0.1/support.png"><img src="images/v2.0.1/support.png" alt="Glance LLM Usage 2.0.1 — Setup guide and support tools" width="960"></a>
 
 ## Get started
 
 1. Download and run the **Setup.exe**, or extract the **Windows.zip** portable package.
-2. Open Glance LLM Usage and choose **Manage providers**. Save websites or finish setup now and connect later.
+2. Open Glance LLM Usage and choose **Accounts → Account setup**. Save websites or finish setup now and connect later.
 3. Use **Sign in with ChatGPT** for Codex/Spark limits without installing Codex desktop. A verified official OpenAI helper downloads on first sign-in. Other providers open in your browser; their automatic subscription tracking is unavailable in this version.
 4. Drag the widget where you want it. Double-click it or choose right-click → Options for all controls.
 
 Windows 10/11 x64-compatible with .NET Framework 4.8. No API key or development tools required. The installer runs per user, with optional desktop/startup shortcuts. The app and installer are unsigned. SHA-256 checksums accompany every release.
 
-## New in 2.0.0
+## New in 2.0.1
 
-Removed the repeated page headings beneath all six Options tabs, giving the content more room. Existing provider connections and settings are preserved.
+The widget and tray now share four quick actions: Options, Refresh, Show/Hide, and Exit. Settings each have one home in Options: used percentage and opacity in Appearance; account setup and refresh timing in Accounts; usage details in Overview; guide in Support; update checks in Updates. Duplicate buttons, navigation shortcuts and explanatory cards are removed. Existing provider choices and preferences are preserved.
 
 ## Provider connections
 
