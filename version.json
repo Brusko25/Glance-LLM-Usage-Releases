@@ -1,8 +1,8 @@
 {
-  "version": "2.0.0",
-  "download_url": "https://github.com/Brusko25/Glance-LLM-Usage-Releases/releases/download/v2.0.0/Glance-LLM-Usage-v2.0.0-Windows.zip",
-  "installer_url": "https://github.com/Brusko25/Glance-LLM-Usage-Releases/releases/download/v2.0.0/Glance-LLM-Usage-v2.0.0-Setup.exe",
-  "installer_sha256": "4a6aa01d14066b2418d755ee981cb003668b831b148e05d13bea91b46b728cb1",
-  "changelog": "Remove repeated headings below every Options tab, with provider choices and settings preserved.",
-  "sha256": "4dd2376eeea4d29cfd6e27e741c4d825b13dc88735a9c740c09cdd95b5df4e31"
+  "version": "2.0.1",
+  "download_url": "https://github.com/Brusko25/Glance-LLM-Usage-Releases/releases/download/v2.0.1/Glance-LLM-Usage-v2.0.1-Windows.zip",
+  "installer_url": "https://github.com/Brusko25/Glance-LLM-Usage-Releases/releases/download/v2.0.1/Glance-LLM-Usage-v2.0.1-Setup.exe",
+  "installer_sha256": "2123d34112e57363ac60e641c420074042bb1cff1a077ccedc1f6bdc93b6b432",
+  "changelog": "Clean quick menus and one home in Options for account setup, display settings, usage details, updates, and help.",
+  "sha256": "daca10ab5e1df7a27e78f9e22fee6dcdae93143e808c39d4f2c5fbc857b64d38"
 }
