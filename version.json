@@ -1,8 +1,8 @@
 {
-  "version": "1.1.0",
-  "download_url": "https://github.com/Brusko25/Glance-LLM-Usage-Releases/releases/download/v1.1.0/Glance-LLM-Usage-v1.1.0-Windows.zip",
-  "installer_url": "https://github.com/Brusko25/Glance-LLM-Usage-Releases/releases/download/v1.1.0/Glance-LLM-Usage-v1.1.0-Setup.exe",
-  "installer_sha256": "6723c07426049f132bccca6fd2c01c40d7020d7959038ee03deb74b8f52d8de8",
-  "changelog": "Full Options window, desktop and appearance controls, consistent app naming, and verified in-app update installation with settings preserved.",
-  "sha256": "23660a7b7e620934c7552d9ac9a7bd5f410b97b0db94937de06a73d5c7fbebac"
+  "version": "1.2.0",
+  "download_url": "https://github.com/Brusko25/Glance-LLM-Usage-Releases/releases/download/v1.2.0/Glance-LLM-Usage-v1.2.0-Windows.zip",
+  "installer_url": "https://github.com/Brusko25/Glance-LLM-Usage-Releases/releases/download/v1.2.0/Glance-LLM-Usage-v1.2.0-Setup.exe",
+  "installer_sha256": "420171e9eebed0ed57e66244466e178c30cd072eee5b36c7e3b20cb56b40737b",
+  "changelog": "Subscription-first provider hub, ChatGPT browser sign-in without Codex desktop, saved provider websites, and preserved settings.",
+  "sha256": "342a0bdbe0cd0d6017b7a9bec58d68ccb22df82932aeae7acf1fb4f20a8620c4"
 }
