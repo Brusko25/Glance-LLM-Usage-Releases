@@ -1,5 +1,14 @@
 # Changelog
 
+## 2.1.0 — 2026-09-21
+
+- Snap to compatible Glance Finance and Plex widgets using the shared v1 protocol. Enable or disable attraction in Options → Desktop → Snap to Glance widgets. Preserve locked positions, independent dragging, and saved settings.
+- Match Finance's charcoal popup colors, subtle border, hover state and Segoe UI typography.
+- Add Lock/Unlock position, Check for updates, and About to both widget and tray menus. Keep position locking synchronized with Desktop settings and show the current version in About.
+- Match Glance Finance's 11-pixel corner radius and subtle one-pixel dark gray outline. Keep the usage widget compact, with its window shape and border scaling together.
+- Match the Options header and navigation to Glance Finance: a Glance mark, white title, compact subtitle, rounded active tab and underline, and a dark Windows title bar. Retain the Usage mint accent and the existing clean page structure.
+
+
 ## 2.0.1 — 2026-09-21
 
 - Keep right-click and tray menus to Options, Refresh, Show/Hide, and Exit. All settings now live in Options.
