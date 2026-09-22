@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.2.0 — 2026-09-21
+
+- Add a subscription-first provider hub with optional browser sign-in for ChatGPT/Codex; no Codex desktop app is required.
+- Download a pinned official OpenAI helper only when signing in, verify both archive and executable hashes, and isolate the Glance account in Windows Credential Manager.
+- Save website shortcuts for ChatGPT, Claude, Gemini, Grok, Perplexity, DeepSeek, Mistral Le Chat, and Microsoft Copilot. Clearly distinguish websites from live usage connections.
+- Allow setup to finish before connecting any accounts, with a visible empty widget and no implicit local account access.
+- Preserve existing Codex and Claude monitoring choices, display preferences, installer behavior, and self-installing updates.
+- ChatGPT live readings cover Codex/Spark quotas, not every ChatGPT model. Browser-only live tracking for the other providers and API billing tracking are not included.
+
+
 ## 1.1.0 — 2026-09-21
 
 - Add a full Options window with Overview, Accounts, Desktop, Appearance, Updates, and Support pages.
