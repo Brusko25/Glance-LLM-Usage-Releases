@@ -1,8 +1,8 @@
 {
-  "version": "1.2.0",
-  "download_url": "https://github.com/Brusko25/Glance-LLM-Usage-Releases/releases/download/v1.2.0/Glance-LLM-Usage-v1.2.0-Windows.zip",
-  "installer_url": "https://github.com/Brusko25/Glance-LLM-Usage-Releases/releases/download/v1.2.0/Glance-LLM-Usage-v1.2.0-Setup.exe",
-  "installer_sha256": "420171e9eebed0ed57e66244466e178c30cd072eee5b36c7e3b20cb56b40737b",
-  "changelog": "Subscription-first provider hub, ChatGPT browser sign-in without Codex desktop, saved provider websites, and preserved settings.",
-  "sha256": "342a0bdbe0cd0d6017b7a9bec58d68ccb22df82932aeae7acf1fb4f20a8620c4"
+  "version": "2.0.0",
+  "download_url": "https://github.com/Brusko25/Glance-LLM-Usage-Releases/releases/download/v2.0.0/Glance-LLM-Usage-v2.0.0-Windows.zip",
+  "installer_url": "https://github.com/Brusko25/Glance-LLM-Usage-Releases/releases/download/v2.0.0/Glance-LLM-Usage-v2.0.0-Setup.exe",
+  "installer_sha256": "4a6aa01d14066b2418d755ee981cb003668b831b148e05d13bea91b46b728cb1",
+  "changelog": "Remove repeated headings below every Options tab, with provider choices and settings preserved.",
+  "sha256": "4dd2376eeea4d29cfd6e27e741c4d825b13dc88735a9c740c09cdd95b5df4e31"
 }
