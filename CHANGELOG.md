@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.1.0 — 2026-09-21
+
+- Add a full Options window with Overview, Accounts, Desktop, Appearance, Updates, and Support pages.
+- Add live widget sizing, backgrounds, accent colors, monitor placement, startup controls, and desktop shortcut creation.
+- Download, verify, install, and restart updates in the app, for installed and portable copies; preserve provider choices and settings.
+- Use Glance LLM Usage consistently in the software and shortcuts. Opening the desktop shortcut opens Options.
+- Preserve existing settings and use a per-user fallback when a portable app folder is read-only. Recover placement after monitor changes.
+
+- Remove the automatic hover popup so it cannot cover the widget or its menus. Connection details and exact reset times are available through the Usage details menu item.
+
 ## 1.0.3 — 2026-09-15
 
 - Detect newer stable releases at startup and daily; add manual update checks and optional links to the product download page.

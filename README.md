@@ -6,38 +6,48 @@ A tiny Windows desktop widget for **Codex, Codex Spark, and Claude usage**. True
 
 ## Screenshots
 
-Glance LLM Usage 1.0.3, captured from the release build with illustrative values and offline account setup. Each installation connects to its owner's accounts. Click an image to see it full size.
+Glance LLM Usage 1.1.0, captured from the actual release build with illustrative values and offline previews. Click any image for full size.
 
-<a href="images/v1.0.3/widget.png"><img src="images/v1.0.3/widget.png" alt="Glance LLM Usage 1.0.3 widget with sample usage and reset countdowns" width="236"></a>
+Options overview:
 
-Account setup (offline preview):
+<a href="images/v1.1.0/options.png"><img src="images/v1.1.0/options.png" alt="Glance LLM Usage 1.1.0 — Options overview" width="960"></a>
 
-<a href="images/v1.0.3/setup.png"><img src="images/v1.0.3/setup.png" alt="Glance LLM Usage 1.0.3 account setup with optional providers" width="550"></a>
+Widget appearance controls:
 
-Application icon, extracted from the release executable:
+<a href="images/v1.1.0/appearance.png"><img src="images/v1.1.0/appearance.png" alt="Glance LLM Usage 1.1.0 — Widget appearance controls" width="960"></a>
 
-<a href="images/v1.0.3/app-icon.png"><img src="images/v1.0.3/app-icon.png" alt="Glance LLM Usage application icon" width="32"></a>
+In-app updates:
+
+<a href="images/v1.1.0/updates.png"><img src="images/v1.1.0/updates.png" alt="Glance LLM Usage 1.1.0 — In-app updates" width="960"></a>
+
+Compact desktop widget with sample usage:
+
+<a href="images/v1.1.0/widget.png"><img src="images/v1.1.0/widget.png" alt="Glance LLM Usage 1.1.0 — Compact desktop widget with sample usage" width="236"></a>
+
+Offline account setup:
+
+<a href="images/v1.1.0/setup.png"><img src="images/v1.1.0/setup.png" alt="Glance LLM Usage 1.1.0 — Offline account setup" width="550"></a>
+
+Application icon:
+
+<a href="images/v1.1.0/app-icon.png"><img src="images/v1.1.0/app-icon.png" alt="Glance LLM Usage 1.1.0 — Application icon" width="32"></a>
 
 ## Get started
 
 1. Download and run the **Setup.exe**, or extract the **Windows.zip** portable package.
 2. Open Glance LLM Usage and select which accounts to monitor.
 3. Sign in to the corresponding Codex and/or Claude desktop app on your PC. Enable Claude's local sign-in access only if you want Claude monitoring.
-4. Drag the widget where you want it. Right-click for all options.
+4. Drag the widget where you want it. Double-click it or choose right-click → Options for all controls.
 
 Windows 10/11 x64-compatible with .NET Framework 4.8. No API key or development tools required. The installer runs per user, with optional desktop/startup shortcuts. The app and installer are unsigned. SHA-256 checksums accompany every release.
 
-## New in 1.0.3
+## New in 1.1.0
 
-The app checks its public GitHub releases shortly after startup and daily. Choose **Check for updates** from the widget or tray menu to check immediately. When a newer stable version is available, you can open the release page. Downloads and installation remain manual; update checks send no account credentials or workspace data.
+A full Options window brings together accounts, desktop placement, appearance, usage details, and updates. Customize widget size, background, accent, opacity and refresh pace. Manage startup and desktop shortcuts without rerunning setup.
 
-### Installation compatibility
+Choose **Install update** to download, verify, install and restart with your settings preserved. Updates support installed and portable copies. Opening the desktop shortcut opens Options; close Options to keep monitoring active.
 
-Glance Usage is now **Glance LLM Usage**, the Codex, Spark, and Claude subscription-usage widget. Existing installations retain their settings, provider choices, and installation folder. The executable remains GlanceUsage.exe.
-
-New installations and shortcuts use **Glance LLM Usage Widget** to stay separate from the finance app that mistakenly used the LLM Usage name in version 2.4.0. The installer rejects finance installation folders. Update installation remains manual.
-
-Looking for stock, crypto, and portfolio widgets? Use [Glance Finance](https://github.com/Brusko25/Glance-Finance-Releases).
+Existing installations keep their folder and provider choices. The software and shortcuts are named **Glance LLM Usage**. The installer rejects Glance Finance folders. Windows 10/11 x64-compatible with .NET Framework 4.8 is required; this is not a macOS or Linux application.
 
 ## What it shows
 

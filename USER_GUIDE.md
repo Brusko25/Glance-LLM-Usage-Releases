@@ -13,14 +13,14 @@ You can monitor either provider or both. Install the provider apps from their of
 
 ## Install
 
-1. Download **Glance-LLM-Usage-v1.0.3-Setup.exe** from the [latest release](https://github.com/Brusko25/Glance-LLM-Usage-Releases/releases/latest).
-2. Run the installer. It installs for your Windows account without requiring administrator access, normally in `%LOCALAPPDATA%\Programs\Glance LLM Usage Widget`.
+1. Download **Glance-LLM-Usage-v1.1.0-Setup.exe** from the [latest release](https://github.com/Brusko25/Glance-LLM-Usage-Releases/releases/latest).
+2. Run the installer. It installs for your Windows account without requiring administrator access, normally in `%LOCALAPPDATA%\Programs\Glance LLM Usage`.
 3. Choose optional desktop and Windows sign-in startup shortcuts if wanted.
 4. Open Glance LLM Usage from the final installer page or Start menu. Complete Account setup.
 
 The app and installer are unsigned; Windows can identify the publisher as unknown. The release includes `SHA256SUMS.txt` for checking download integrity.
 
-For a portable copy, download **Glance-LLM-Usage-v1.0.3-Windows.zip**, extract all four files to a writable folder, and run `GlanceUsage.exe`. No compiler or developer tools are needed for either download. Avoid protected folders such as Program Files for a portable copy.
+For a portable copy, download **Glance-LLM-Usage-v1.1.0-Windows.zip**, extract all four files to a writable folder, and run `GlanceUsage.exe`. No compiler or developer tools are needed for either download. Avoid protected folders such as Program Files for a portable copy.
 
 ## Connect your accounts
 
@@ -58,7 +58,7 @@ Codex defaults to a fresh request every **15 seconds**. Claude uses a minimum of
 
 Server processing delays and network latency can add lag. The widget shows the last value the provider returned; it does not estimate token use or promise instant readings. Failed requests retry more slowly, and `Retry-After` cooldowns are respected even when Refresh now is clicked.
 
-Each provider updates independently. **STALE** means its previous reading is retained after a failure or delay. **OFFLINE** means there is no successful reading yet. Hover to see connection details, each provider's last successful update, and exact reset dates in your local time zone.
+Each provider updates independently. **STALE** means its previous reading is retained after a failure or delay. **OFFLINE** means there is no successful reading yet. Choose **Usage details** from the right-click menu to see connection details, each provider's last successful update, and exact reset dates in your local time zone.
 
 Remaining is `100 − used percentage`. Missing values stay unavailable. A reset countdown reaching zero does not invent a fresh 100% quota; the next successful response must confirm it.
 
@@ -70,24 +70,40 @@ Codex reports the windows available for that account; a weekly-only limit is nor
 - **Claude sign-in unavailable or expired:** open Claude desktop and use the signed-in app so it can renew its credential, then allow the next retry. Glance LLM Usage never rotates Claude's tokens itself.
 - **Multiple Claude organizations:** the widget will not silently select among multiple eligible organizations. Use the intended account in Claude; multi-organization selection is not supported in this release.
 - **Cooldown/stale:** wait for the provider's cooldown. Repeated refresh clicks do not bypass it.
-- **Cannot save settings:** move the portable copy to a writable folder, or use the per-user installer.
+- **Cannot save settings:** check disk space and permissions. Read-only portable folders automatically use a per-user settings folder; find it under Options → Support. Updates still require write access to the application folder.
 - **A provider update breaks monitoring:** check this project's releases. Claude's usage endpoint and encrypted desktop cache are internal interfaces, so compatibility may require a widget update.
 
 Advanced environment overrides `GLANCE_CODEX_PATH` and `GLANCE_CLAUDE_DATA_DIR` are supported. Paths saved in Account setup take priority.
 
 ## Saved data, updates, and removal
 
-`settings.json` holds position/display preferences and `connections.json` holds enabled providers and optional local paths, beside the executable. No credentials, usage history, or raw API responses are saved. Do not share these personal configuration files.
+`settings.json` holds position/display preferences and `connections.json` holds enabled providers and optional local paths, beside the executable when writable, otherwise in a separate per-user folder under LocalAppData. Options → Support → Open settings folder opens the active location. No credentials, usage history, or raw API responses are saved. Do not share these personal configuration files.
 
-For an update, exit the widget and run the newer installer, or replace the executable and documents from a newer portable ZIP. The release payload contains no configuration files; upgrades retain yours. Back up the two JSON files if you want to preserve settings before moving the app.
+For an update, choose Options → Updates → Check for updates, then Install update. The app downloads the matching package, verifies its checksum, saves settings, installs, and restarts. You can still install a downloaded release manually. The release payload contains no configuration files; upgrades retain yours. Back up the two JSON files if you want to preserve settings before moving the app.
 
 Uninstall through Windows Installed apps. It removes program files and installer-created shortcuts, while retaining your two configuration files. Delete the remaining Glance LLM Usage installation folder yourself if you also want to remove those preferences. Your Codex and Claude accounts are unaffected.
 
-Downloads and support: [Glance LLM Usage Releases](https://github.com/Brusko25/Glance-LLM-Usage-Releases). When reporting a problem, include the app version and the error shown on hover; never include credentials, provider data folders, or tokens.
+Downloads and support: [Glance LLM Usage Releases](https://github.com/Brusko25/Glance-LLM-Usage-Releases). When reporting a problem, include the app version and the error shown in **Usage details**; never include credentials, provider data folders, or tokens.
 
-Version 1.0.2 renames Glance Usage to Glance LLM Usage. Existing installations retain their previous folder and settings; the executable remains GlanceUsage.exe. New installations and shortcuts use Glance LLM Usage Widget to keep them separate from the finance app that was mistakenly branded Glance LLM Usage in version 2.4.0. Use the usage widget installer only for this app. Installer upgrades preserve the existing startup selection.
+The application and shortcuts are named **Glance LLM Usage**. Existing installations retain their folder and settings; the executable remains GlanceUsage.exe. The installer rejects folders containing Glance Finance.
 
+## Options window
+
+Open Options from the desktop/Start menu shortcut, right-click → Options, double-click the widget, or press Ctrl+O while the widget has focus. Closing Options keeps monitoring running; Quit app exits both.
+
+- **Overview:** provider readings and quick actions.
+- **Accounts:** installation detection and Account setup; custom paths remain optional. Detection does not imply a valid sign-in.
+- **Desktop:** always on top, position lock, monitor selection, reset position, startup and desktop shortcut controls.
+- **Appearance:** 75–200% widget sizing, Black/Graphite/Midnight backgrounds, Mint/Lavender/Amber Codex accents, 70–100% opacity, used/remaining percentages, and Codex refresh pace.
+- **Updates:** automatic-check preference and in-app update installation.
+- **Support:** usage details with reset timestamps, setup guide, issues, and active settings folder.
+
+Controls are scrollable on smaller displays and scale with Windows display settings. Provider requests still honor minimum intervals and server cooldowns.
 
 ## Checking for new versions
 
-The app checks its public GitHub releases shortly after startup and daily. Choose **Check for updates** from the widget or tray menu to check immediately. When a newer stable version is available, you can open the release page. Downloads and installation remain manual; update checks send no account credentials or workspace data.
+Automatic checks run shortly after startup and daily, and can be disabled in Options. They only notify; installation starts when you choose **Install update**. Downloads are limited to this product's GitHub release URLs and verified against SHA-256 metadata before any app files change. Downloads can be cancelled before installation. The app saves settings before handing off, waits for the old process to exit, and reopens after installing. Portable replacement failures roll back the old files.
+
+Installed copies update in their existing folder and retain startup choices. Portable copies need a writable application folder. No administrator rights are required for normal per-user installations. Existing v1.0.3 users need to install this release once using the downloaded installer; subsequent updates use the in-app installer.
+
+This remains a Windows application: Windows 10/11 on x64-compatible systems with .NET Framework 4.8. macOS and Linux are not supported. Provider subscription eligibility and local sign-in requirements still apply.
