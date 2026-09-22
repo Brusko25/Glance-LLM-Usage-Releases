@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.0.0 — 2026-09-21
+
+- Remove the repeated page headings below all six Options tabs. The selected tab identifies the page and content starts directly beneath navigation.
+- Preserve provider connections, display preferences, and in-app updates.
+
+
 ## 1.2.0 — 2026-09-21
 
 - Add a subscription-first provider hub with optional browser sign-in for ChatGPT/Codex; no Codex desktop app is required.

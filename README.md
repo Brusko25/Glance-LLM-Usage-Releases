@@ -6,27 +6,31 @@ A compact Windows app for **subscription limits and your favorite AI providers**
 
 ## Screenshots
 
-Glance LLM Usage 1.2.0, captured from the actual release build with illustrative values and offline previews. Click any image for full size.
+Glance LLM Usage 2.0.0, captured from the actual release build with illustrative values and offline previews. Click any image for full size.
 
 Options overview:
 
-<a href="images/v1.2.0/options.png"><img src="images/v1.2.0/options.png" alt="Glance LLM Usage 1.2.0 — Options overview" width="960"></a>
+<a href="images/v2.0.0/options.png"><img src="images/v2.0.0/options.png" alt="Glance LLM Usage 2.0.0 — Options overview" width="960"></a>
 
 Provider accounts and supported connection types:
 
-<a href="images/v1.2.0/accounts.png"><img src="images/v1.2.0/accounts.png" alt="Glance LLM Usage 1.2.0 — Provider accounts and connection support" width="960"></a>
+<a href="images/v2.0.0/accounts.png"><img src="images/v2.0.0/accounts.png" alt="Glance LLM Usage 2.0.0 — Provider accounts and connection support" width="960"></a>
+
+Widget appearance controls:
+
+<a href="images/v2.0.0/appearance.png"><img src="images/v2.0.0/appearance.png" alt="Glance LLM Usage 2.0.0 — Appearance controls without a repeated heading" width="960"></a>
 
 In-app updates:
 
-<a href="images/v1.2.0/updates.png"><img src="images/v1.2.0/updates.png" alt="Glance LLM Usage 1.2.0 — In-app updates" width="960"></a>
+<a href="images/v2.0.0/updates.png"><img src="images/v2.0.0/updates.png" alt="Glance LLM Usage 2.0.0 — In-app updates" width="960"></a>
 
 Compact desktop widget with sample usage:
 
-<a href="images/v1.2.0/widget.png"><img src="images/v1.2.0/widget.png" alt="Glance LLM Usage 1.2.0 — Compact desktop widget with sample usage" width="236"></a>
+<a href="images/v2.0.0/widget.png"><img src="images/v2.0.0/widget.png" alt="Glance LLM Usage 2.0.0 — Compact desktop widget with sample usage" width="236"></a>
 
 Offline account setup:
 
-<a href="images/v1.2.0/setup.png"><img src="images/v1.2.0/setup.png" alt="Glance LLM Usage 1.2.0 — Offline account setup" width="720"></a>
+<a href="images/v2.0.0/setup.png"><img src="images/v2.0.0/setup.png" alt="Glance LLM Usage 2.0.0 — Offline account setup" width="720"></a>
 
 ## Get started
 
@@ -37,7 +41,11 @@ Offline account setup:
 
 Windows 10/11 x64-compatible with .NET Framework 4.8. No API key or development tools required. The installer runs per user, with optional desktop/startup shortcuts. The app and installer are unsigned. SHA-256 checksums accompany every release.
 
-## New in 1.2.0
+## New in 2.0.0
+
+Removed the repeated page headings beneath all six Options tabs, giving the content more room. Existing provider connections and settings are preserved.
+
+## Provider connections
 
 A subscription-first provider hub adds browser sign-in for ChatGPT/Codex and saved websites for ChatGPT, Claude, Gemini, Grok, Perplexity, DeepSeek, Mistral Le Chat, and Microsoft Copilot. Live connections and website shortcuts have distinct labels. No API key or developer billing setup is required; API usage/spending is not tracked.
 
