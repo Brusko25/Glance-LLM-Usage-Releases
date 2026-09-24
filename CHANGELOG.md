@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.1.1 — 2026-09-23
+
+- Keep one ChatGPT/Codex helper running and ask it for limits on each refresh, instead of starting and force-closing a new helper every time. This removes repeated forced helper termination; the cause of the reported Windows LSASS crash remains unconfirmed.
+- Close helpers cleanly: end their input and let them exit on their own; force-close only one that is still running after a grace period.
+- Verify the helper's hash once per start instead of on every refresh, and close the idle helper before account sign-in or sign-out.
+
 ## 2.1.0 — 2026-09-21
 
 - Snap to compatible Glance Finance and Plex widgets using the shared v1 protocol. Enable or disable attraction in Options → Desktop → Snap to Glance widgets. Preserve locked positions, independent dragging, and saved settings.

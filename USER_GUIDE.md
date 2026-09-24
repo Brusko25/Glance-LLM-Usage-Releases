@@ -13,14 +13,14 @@ No API key or developer billing setup is needed. Chat subscriptions and develope
 
 ## Install
 
-1. Download **Glance-LLM-Usage-v2.1.0-Setup.exe** from the [latest release](https://github.com/Brusko25/Glance-LLM-Usage-Releases/releases/latest).
+1. Download **Glance-LLM-Usage-v2.1.1-Setup.exe** from the [latest release](https://github.com/Brusko25/Glance-LLM-Usage-Releases/releases/latest).
 2. Run the installer. It installs for your Windows account without requiring administrator access, normally in `%LOCALAPPDATA%\Programs\Glance LLM Usage`.
 3. Choose optional desktop and Windows sign-in startup shortcuts if wanted.
 4. Open Glance LLM Usage from the final installer page or Start menu. Complete Account setup.
 
 The app and installer are unsigned; Windows can identify the publisher as unknown. The release includes `SHA256SUMS.txt` for checking download integrity.
 
-For a portable copy, download **Glance-LLM-Usage-v2.1.0-Windows.zip**, extract all four files to a writable folder, and run `GlanceUsage.exe`. No compiler or developer tools are needed for either download. Avoid protected folders such as Program Files for a portable copy.
+For a portable copy, download **Glance-LLM-Usage-v2.1.1-Windows.zip**, extract all four files to a writable folder, and run `GlanceUsage.exe`. No compiler or developer tools are needed for either download. Avoid protected folders such as Program Files for a portable copy.
 
 ## Connect your accounts
 
@@ -75,6 +75,8 @@ The widget and tray share a short menu: **Options**, **Refresh now**, **Lock pos
 **Options → Desktop → Snap to Glance widgets** is on by default. Drag an unlocked widget within 12 logical pixels of another compatible Glance widget to align their edges. Pull away to separate them. Lock position prevents movement, but other widgets can still align with the locked one. Each app must be running a build that supports the shared Glance snapping protocol; older releases will not snap across apps. Hidden and minimized widgets do not attract. Turning this setting off allows free dragging of Usage while it remains an anchor for other apps.
 
 ## Refresh and meaning
+
+Codex readings reuse one helper process across refreshes. Exiting Glance closes its input so it can shut down normally; a helper that does not exit receives a forced stop only after a grace period. This applies to both browser and existing-desktop connections.
 
 Codex defaults to a fresh request every **15 seconds**. Claude uses a minimum of **60 seconds**. Choosing a longer Codex interval also slows Claude when that interval exceeds 60 seconds. The timer starts after a request finishes. Reset labels are recalculated each second and displayed in whole minutes/hours.
 

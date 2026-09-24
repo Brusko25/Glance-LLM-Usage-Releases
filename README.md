@@ -6,43 +6,43 @@ A compact Windows app for **subscription limits and your favorite AI providers**
 
 ## Screenshots
 
-Glance LLM Usage 2.1.0, captured from the actual release build with illustrative values and offline previews. Click any image for full size.
+Glance LLM Usage 2.1.1, captured from the actual release build with illustrative values and offline previews. Click any image for full size.
 
 Options overview:
 
-<a href="images/v2.1.0/options.png"><img src="images/v2.1.0/options.png" alt="Glance LLM Usage 2.1.0 — Options overview" width="960"></a>
+<a href="images/v2.1.1/options.png"><img src="images/v2.1.1/options.png" alt="Glance LLM Usage 2.1.1 — Options overview" width="960"></a>
 
 Provider accounts and supported connection types:
 
-<a href="images/v2.1.0/accounts.png"><img src="images/v2.1.0/accounts.png" alt="Glance LLM Usage 2.1.0 — Provider accounts and connection support" width="960"></a>
+<a href="images/v2.1.1/accounts.png"><img src="images/v2.1.1/accounts.png" alt="Glance LLM Usage 2.1.1 — Provider accounts and connection support" width="960"></a>
 
 Shared snapping and desktop placement:
 
-<a href="images/v2.1.0/desktop.png"><img src="images/v2.1.0/desktop.png" alt="Glance LLM Usage 2.1.0 — Shared snapping and desktop placement" width="960"></a>
+<a href="images/v2.1.1/desktop.png"><img src="images/v2.1.1/desktop.png" alt="Glance LLM Usage 2.1.1 — Shared snapping and desktop placement" width="960"></a>
 
 Widget appearance controls:
 
-<a href="images/v2.1.0/appearance.png"><img src="images/v2.1.0/appearance.png" alt="Glance LLM Usage 2.1.0 — Appearance controls without a repeated heading" width="960"></a>
+<a href="images/v2.1.1/appearance.png"><img src="images/v2.1.1/appearance.png" alt="Glance LLM Usage 2.1.1 — Appearance controls without a repeated heading" width="960"></a>
 
 In-app updates:
 
-<a href="images/v2.1.0/updates.png"><img src="images/v2.1.0/updates.png" alt="Glance LLM Usage 2.1.0 — In-app updates" width="960"></a>
+<a href="images/v2.1.1/updates.png"><img src="images/v2.1.1/updates.png" alt="Glance LLM Usage 2.1.1 — In-app updates" width="960"></a>
 
 Compact desktop widget with sample usage:
 
-<a href="images/v2.1.0/widget.png"><img src="images/v2.1.0/widget.png" alt="Glance LLM Usage 2.1.0 — Compact desktop widget with sample usage" width="236"></a>
+<a href="images/v2.1.1/widget.png"><img src="images/v2.1.1/widget.png" alt="Glance LLM Usage 2.1.1 — Compact desktop widget with sample usage" width="236"></a>
 
 Quick menu:
 
-<a href="images/v2.1.0/menu.png"><img src="images/v2.1.0/menu.png" alt="Glance LLM Usage 2.1.0 — Essential right-click and tray actions" width="150"></a>
+<a href="images/v2.1.1/menu.png"><img src="images/v2.1.1/menu.png" alt="Glance LLM Usage 2.1.1 — Essential right-click and tray actions" width="150"></a>
 
 Help and setup:
 
-<a href="images/v2.1.0/support.png"><img src="images/v2.1.0/support.png" alt="Glance LLM Usage 2.1.0 — Setup guide and support tools" width="960"></a>
+<a href="images/v2.1.1/support.png"><img src="images/v2.1.1/support.png" alt="Glance LLM Usage 2.1.1 — Setup guide and support tools" width="960"></a>
 
 About and version information:
 
-<a href="images/v2.1.0/about.png"><img src="images/v2.1.0/about.png" alt="Glance LLM Usage 2.1.0 — About and version information" width="448"></a>
+<a href="images/v2.1.1/about.png"><img src="images/v2.1.1/about.png" alt="Glance LLM Usage 2.1.1 — About and version information" width="448"></a>
 
 ## Get started
 
@@ -53,11 +53,11 @@ About and version information:
 
 Windows 10/11 x64-compatible with .NET Framework 4.8. No API key or development tools required. The installer runs per user, with optional desktop/startup shortcuts. The app and installer are unsigned. SHA-256 checksums accompany every release.
 
-## New in 2.1.0
+## New in 2.1.1
 
-Drag Usage next to a compatible Glance Finance or Plex widget to align their edges. **Options → Desktop → Snap to Glance widgets** is on by default. Both apps must run a build supporting the shared snapping protocol; older builds cannot participate. Widgets stay independently movable.
+Codex usage checks now reuse one helper process across refreshes. On shutdown, Glance closes its input and lets it exit normally; forced termination is reserved for a helper that does not exit within the grace period. Both browser sign-in and existing Codex installations use this behavior. Existing settings and refresh intervals are preserved.
 
-The Options header and tabs now match Finance, with Usage's mint accent. The widget has Finance's 11-pixel corners and fine gray outline. Quick Lock/Unlock, Check for updates, and About actions are available in both popup menus.
+This update removes repeated forced helper termination. It does not establish that the reported Windows LSASS crash is resolved.
 
 ## Clean Options navigation
 
