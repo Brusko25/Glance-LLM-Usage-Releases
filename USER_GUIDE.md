@@ -13,14 +13,14 @@ No API key or developer billing setup is needed. Chat subscriptions and develope
 
 ## Install
 
-1. Download **Glance-LLM-Usage-v2.1.1-Setup.exe** from the [latest release](https://github.com/Brusko25/Glance-LLM-Usage-Releases/releases/latest).
+1. Download **Glance-LLM-Usage-v2.1.2-Setup.exe** from the [latest release](https://github.com/Brusko25/Glance-LLM-Usage-Releases/releases/latest).
 2. Run the installer. It installs for your Windows account without requiring administrator access, normally in `%LOCALAPPDATA%\Programs\Glance LLM Usage`.
 3. Choose optional desktop and Windows sign-in startup shortcuts if wanted.
 4. Open Glance LLM Usage from the final installer page or Start menu. Complete Account setup.
 
 The app and installer are unsigned; Windows can identify the publisher as unknown. The release includes `SHA256SUMS.txt` for checking download integrity.
 
-For a portable copy, download **Glance-LLM-Usage-v2.1.1-Windows.zip**, extract all four files to a writable folder, and run `GlanceUsage.exe`. No compiler or developer tools are needed for either download. Avoid protected folders such as Program Files for a portable copy.
+For a portable copy, download **Glance-LLM-Usage-v2.1.2-Windows.zip**, extract all four files to a writable folder, and run `GlanceUsage.exe`. No compiler or developer tools are needed for either download. Avoid protected folders such as Program Files for a portable copy.
 
 ## Connect your accounts
 
@@ -78,11 +78,11 @@ The widget and tray share a short menu: **Options**, **Refresh now**, **Lock pos
 
 Codex readings reuse one helper process across refreshes. Exiting Glance closes its input so it can shut down normally; a helper that does not exit receives a forced stop only after a grace period. This applies to both browser and existing-desktop connections.
 
-Codex defaults to a fresh request every **15 seconds**. Claude uses a minimum of **60 seconds**. Choosing a longer Codex interval also slows Claude when that interval exceeds 60 seconds. The timer starts after a request finishes. Reset labels are recalculated each second and displayed in whole minutes/hours.
+Codex defaults to a fresh request every **minute** (choose 1, 2, 5 or 10 minutes). Claude defaults to every **5 minutes** (choose 5, 10 or 15 minutes): Claude's usage service answers more frequent checks with rate-limit errors. A Codex interval longer than the Claude interval also slows Claude. The timer starts after a request finishes. Scheduled refreshes pause while Windows is locked or asleep and run as soon as you unlock or wake the PC. Reset labels are recalculated each second and displayed in whole minutes/hours.
 
 Server processing delays and network latency can add lag. The widget shows the last value the provider returned; it does not estimate token use or promise instant readings. Failed requests retry more slowly, and `Retry-After` cooldowns are respected even when Refresh now is clicked.
 
-Each provider updates independently. **STALE** means its previous reading is retained after a failure or delay. **OFFLINE** means there is no successful reading yet. Choose **Options → Overview → Usage details** to see connection details, each provider's last successful update, and exact reset dates in your local time zone.
+Each provider updates independently. **STALE** means the reading shown is older than two refresh intervals, for example after several failed checks or right after unlocking the PC. A single failed check keeps showing the previous reading without the label; hover over the widget to see the reason. **OFFLINE** means there is no successful reading yet. Choose **Options → Overview → Usage details** to see connection details, each provider's last successful update, and exact reset dates in your local time zone.
 
 Remaining is `100 − used percentage`. Missing values stay unavailable. A reset countdown reaching zero does not invent a fresh 100% quota; the next successful response must confirm it.
 
@@ -116,7 +116,7 @@ The application and shortcuts are named **Glance LLM Usage**. Existing installat
 Open Options from the desktop/Start menu shortcut, right-click → Options, double-click the widget, or press Ctrl+O while the widget has focus. Closing Options keeps monitoring running; Quit app exits both.
 
 - **Overview:** live readings, Refresh usage, expandable Usage details, and saved provider websites.
-- **Accounts:** Account setup for browser sign-in, saved websites and optional desktop connections; Codex refresh timing. A website shortcut never indicates a live connection.
+- **Accounts:** Account setup for browser sign-in, saved websites and optional desktop connections; Claude and Codex refresh timing. A website shortcut never indicates a live connection.
 - **Desktop:** always on top, position lock, monitor selection, reset position, startup and desktop shortcut controls.
 - **Appearance:** 75–200% widget sizing, Black/Graphite/Midnight backgrounds, Mint/Lavender/Amber Codex accents, 70–100% opacity, used/remaining percentages.
 - **Updates:** automatic-check preference and in-app update installation.

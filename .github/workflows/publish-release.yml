@@ -1,0 +1,38 @@
+name: Publish release
+# Creates a GitHub release in this repository with its own token. Push a temporary branch
+# named publish/v<version> whose files are release-notes.md, SHA256SUMS.txt and the two
+# assets it lists. The assets must match SHA256SUMS.txt, the release is created from main,
+# an existing release is never replaced, and the temporary branch is always deleted.
+on:
+  push:
+    branches: ['publish/v*']
+permissions:
+  contents: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out the publish branch
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Verify assets and create the release
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          BRANCH: ${{ github.ref_name }}
+        run: |
+          set -euo pipefail
+          tag="${BRANCH#publish/}"; version="${tag#v}"
+          [[ "$version" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]] || { echo "::error::Invalid version in $BRANCH"; exit 1; }
+          zip="Glance-LLM-Usage-v$version-Windows.zip"; setup="Glance-LLM-Usage-v$version-Setup.exe"
+          for file in release-notes.md SHA256SUMS.txt "$zip" "$setup"; do [ -f "$file" ] || { echo "::error::Missing $file"; exit 1; }; done
+          # Package.ps1 writes Windows line endings; compare without them, publish the file unchanged.
+          tr -d '\r' < SHA256SUMS.txt > "$RUNNER_TEMP/sums.txt"
+          if [ "$(grep -c . "$RUNNER_TEMP/sums.txt")" -ne 2 ] || ! grep -q "  $zip\$" "$RUNNER_TEMP/sums.txt" || ! grep -q "  $setup\$" "$RUNNER_TEMP/sums.txt"; then echo "::error::SHA256SUMS.txt must list exactly the two assets"; exit 1; fi
+          sha256sum -c "$RUNNER_TEMP/sums.txt"
+          if gh release view "$tag" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then echo "::error::$tag already exists. Published releases are never replaced."; exit 1; fi
+          gh release create "$tag" --repo "$GITHUB_REPOSITORY" --target main --title "Glance LLM Usage $version" --notes-file release-notes.md "$zip" "$setup" SHA256SUMS.txt
+      - name: Delete the publish branch
+        if: always()
+        shell: bash
+        run: git push origin --delete "${{ github.ref_name }}"

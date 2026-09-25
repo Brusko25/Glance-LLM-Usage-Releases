@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.1.2 — 2026-09-25
+
+- Claude no longer shows STALE almost all the time. Claude's usage service rejects frequent checks (HTTP 429), and checking every minute kept hitting that limit. Claude now checks every 5 minutes by default, with 10 and 15 minutes available under Accounts → Refresh timing.
+- STALE now means the numbers are actually old (more than two refresh intervals). A single failed check keeps the previous reading without the label; the reason is in the tooltip and Usage details.
+- Codex checks every minute by default, with 1, 2, 5 and 10 minutes available. Saved 15- and 30-second settings move to 1 minute.
+- Scheduled checks pause while Windows is locked or asleep, and run as soon as you unlock or wake the PC.
+
 ## 2.1.1 — 2026-09-23
 
 - Keep one ChatGPT/Codex helper running and ask it for limits on each refresh, instead of starting and force-closing a new helper every time. This removes repeated forced helper termination; the cause of the reported Windows LSASS crash remains unconfirmed.

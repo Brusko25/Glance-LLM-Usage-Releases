@@ -6,43 +6,43 @@ A compact Windows app for **subscription limits and your favorite AI providers**
 
 ## Screenshots
 
-Glance LLM Usage 2.1.1, captured from the actual release build with illustrative values and offline previews. Click any image for full size.
+Glance LLM Usage 2.1.2, captured from the actual release build with illustrative values and offline previews. Click any image for full size.
 
 Options overview:
 
-<a href="images/v2.1.1/options.png"><img src="images/v2.1.1/options.png" alt="Glance LLM Usage 2.1.1 — Options overview" width="960"></a>
+<a href="images/v2.1.2/options.png"><img src="images/v2.1.2/options.png" alt="Glance LLM Usage 2.1.2 — Options overview" width="960"></a>
 
 Provider accounts and supported connection types:
 
-<a href="images/v2.1.1/accounts.png"><img src="images/v2.1.1/accounts.png" alt="Glance LLM Usage 2.1.1 — Provider accounts and connection support" width="960"></a>
+<a href="images/v2.1.2/accounts.png"><img src="images/v2.1.2/accounts.png" alt="Glance LLM Usage 2.1.2 — Provider accounts and connection support" width="960"></a>
 
 Shared snapping and desktop placement:
 
-<a href="images/v2.1.1/desktop.png"><img src="images/v2.1.1/desktop.png" alt="Glance LLM Usage 2.1.1 — Shared snapping and desktop placement" width="960"></a>
+<a href="images/v2.1.2/desktop.png"><img src="images/v2.1.2/desktop.png" alt="Glance LLM Usage 2.1.2 — Shared snapping and desktop placement" width="960"></a>
 
 Widget appearance controls:
 
-<a href="images/v2.1.1/appearance.png"><img src="images/v2.1.1/appearance.png" alt="Glance LLM Usage 2.1.1 — Appearance controls without a repeated heading" width="960"></a>
+<a href="images/v2.1.2/appearance.png"><img src="images/v2.1.2/appearance.png" alt="Glance LLM Usage 2.1.2 — Appearance controls without a repeated heading" width="960"></a>
 
 In-app updates:
 
-<a href="images/v2.1.1/updates.png"><img src="images/v2.1.1/updates.png" alt="Glance LLM Usage 2.1.1 — In-app updates" width="960"></a>
+<a href="images/v2.1.2/updates.png"><img src="images/v2.1.2/updates.png" alt="Glance LLM Usage 2.1.2 — In-app updates" width="960"></a>
 
 Compact desktop widget with sample usage:
 
-<a href="images/v2.1.1/widget.png"><img src="images/v2.1.1/widget.png" alt="Glance LLM Usage 2.1.1 — Compact desktop widget with sample usage" width="236"></a>
+<a href="images/v2.1.2/widget.png"><img src="images/v2.1.2/widget.png" alt="Glance LLM Usage 2.1.2 — Compact desktop widget with sample usage" width="236"></a>
 
 Quick menu:
 
-<a href="images/v2.1.1/menu.png"><img src="images/v2.1.1/menu.png" alt="Glance LLM Usage 2.1.1 — Essential right-click and tray actions" width="150"></a>
+<a href="images/v2.1.2/menu.png"><img src="images/v2.1.2/menu.png" alt="Glance LLM Usage 2.1.2 — Essential right-click and tray actions" width="150"></a>
 
 Help and setup:
 
-<a href="images/v2.1.1/support.png"><img src="images/v2.1.1/support.png" alt="Glance LLM Usage 2.1.1 — Setup guide and support tools" width="960"></a>
+<a href="images/v2.1.2/support.png"><img src="images/v2.1.2/support.png" alt="Glance LLM Usage 2.1.2 — Setup guide and support tools" width="960"></a>
 
 About and version information:
 
-<a href="images/v2.1.1/about.png"><img src="images/v2.1.1/about.png" alt="Glance LLM Usage 2.1.1 — About and version information" width="448"></a>
+<a href="images/v2.1.2/about.png"><img src="images/v2.1.2/about.png" alt="Glance LLM Usage 2.1.2 — About and version information" width="448"></a>
 
 ## Get started
 
@@ -53,11 +53,11 @@ About and version information:
 
 Windows 10/11 x64-compatible with .NET Framework 4.8. No API key or development tools required. The installer runs per user, with optional desktop/startup shortcuts. The app and installer are unsigned. SHA-256 checksums accompany every release.
 
-## New in 2.1.1
+## New in 2.1.2
 
-Codex usage checks now reuse one helper process across refreshes. On shutdown, Glance closes its input and lets it exit normally; forced termination is reserved for a helper that does not exit within the grace period. Both browser sign-in and existing Codex installations use this behavior. Existing settings and refresh intervals are preserved.
+Claude no longer shows **STALE** almost all the time. Claude's usage service rejects checks that come too often, and checking every minute kept running into that limit. Claude now checks every **5 minutes** by default (10 or 15 minutes under **Accounts → Refresh timing**), and **STALE** appears only when the numbers shown are actually old. A single refused check keeps the previous reading; hover over the widget to see why.
 
-This update removes repeated forced helper termination. It does not establish that the reported Windows LSASS crash is resolved.
+Codex checks every minute by default, with 2, 5 and 10 minutes available. Saved 15- and 30-second settings move to 1 minute. Scheduled checks pause while Windows is locked or asleep and run as soon as you return. Other settings are preserved.
 
 ## Clean Options navigation
 
@@ -77,7 +77,7 @@ Choose **Install update** to download, verify, install and restart with your set
 - Optional Claude five-hour and overall weekly limits through an existing desktop sign-in.
 - Saved provider websites on Overview; website shortcuts do not generate live quota readings.
 - Remaining or used percentages, progress bars, and reset countdowns.
-- Codex checks every 15 seconds; Claude at most once per minute. Errors back off automatically and stale readings are marked.
+- Codex checks every minute and Claude every 5 minutes by default (both adjustable). Errors back off automatically, readings older than two intervals are marked STALE, and checks pause while Windows is locked or asleep.
 
 No account credentials are bundled. Claude monitoring is off until explicitly enabled during setup. Its existing desktop credential is used locally and sent only to Anthropic's usage service; the widget does not copy Claude credentials or save usage history. ChatGPT browser credentials are handled separately by the official helper and Windows Credential Manager. Claude's internal interfaces can change; see the [guide](USER_GUIDE.md) for compatibility and troubleshooting.
 
