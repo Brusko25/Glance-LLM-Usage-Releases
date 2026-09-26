@@ -1,8 +1,8 @@
 {
-  "version": "2.1.3",
-  "download_url": "https://github.com/Brusko25/Glance-LLM-Usage-Releases/releases/download/v2.1.3/Glance-LLM-Usage-v2.1.3-Windows.zip",
-  "installer_url": "https://github.com/Brusko25/Glance-LLM-Usage-Releases/releases/download/v2.1.3/Glance-LLM-Usage-v2.1.3-Setup.exe",
-  "installer_sha256": "a180a1edba8d3a8a1e18e914499e99bc5d2c789e5199a009dfab77884eaf87df",
-  "changelog": "Claude keeps its sign-in token in memory between checks instead of decrypting it every time; includes the 2.1.2 refresh and STALE fixes.",
-  "sha256": "77cb83c09634d8b7ed00a468270b3c7d6bd57ac23b90828eeff6ed7d68a636d0"
+  "version": "2.2.0",
+  "download_url": "https://github.com/Brusko25/Glance-LLM-Usage-Releases/releases/download/v2.2.0/Glance-LLM-Usage-v2.2.0-Windows.zip",
+  "installer_url": "https://github.com/Brusko25/Glance-LLM-Usage-Releases/releases/download/v2.2.0/Glance-LLM-Usage-v2.2.0-Setup.exe",
+  "installer_sha256": "f2325c85fd070eafc57c6ec3ccbc1b384daafa299b711d029ece05022f70fbb0",
+  "changelog": "Retires the Codex app connection: Codex is tracked through Sign in with ChatGPT. Claude keeps its sign-in token in memory between checks.",
+  "sha256": "7fbfd3d7e5ce0ecf43e9932ad2e2f5b7f91aef056e1febb7672b364daf30ac3b"
 }
