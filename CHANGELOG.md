@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.2.1 — 2026-09-26
+
+- New app icon: purple and mint usage bars on a black tile. It appears on the app, tray, windows, shortcuts and installer. Nothing else changes.
+
 ## 2.2.0 — 2026-09-25
 
 - Retired the option that read Codex through the Codex app's own `codex.exe`. It ran whichever helper the Codex app shipped, which Glance could not verify. Codex is now tracked only through **Sign in with ChatGPT**, which uses a pinned, hash-verified official helper. If you used the old option, the Codex row explains how to switch until you sign in with ChatGPT or stop Codex monitoring; nothing else changes and your settings file is not rewritten.

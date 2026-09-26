@@ -6,43 +6,43 @@ A compact Windows app for **subscription limits and your favorite AI providers**
 
 ## Screenshots
 
-Glance LLM Usage 2.2.0, captured from the actual release build with illustrative values and offline previews. Click any image for full size.
+Glance LLM Usage 2.2.1, captured from the actual release build with illustrative values and offline previews. Click any image for full size.
 
 Options overview:
 
-<a href="images/v2.2.0/options.png"><img src="images/v2.2.0/options.png" alt="Glance LLM Usage 2.2.0 — Options overview" width="960"></a>
+<a href="images/v2.2.1/options.png"><img src="images/v2.2.1/options.png" alt="Glance LLM Usage 2.2.1 — Options overview" width="960"></a>
 
 Provider accounts and supported connection types:
 
-<a href="images/v2.2.0/accounts.png"><img src="images/v2.2.0/accounts.png" alt="Glance LLM Usage 2.2.0 — Provider accounts and connection support" width="960"></a>
+<a href="images/v2.2.1/accounts.png"><img src="images/v2.2.1/accounts.png" alt="Glance LLM Usage 2.2.1 — Provider accounts and connection support" width="960"></a>
 
 Shared snapping and desktop placement:
 
-<a href="images/v2.2.0/desktop.png"><img src="images/v2.2.0/desktop.png" alt="Glance LLM Usage 2.2.0 — Shared snapping and desktop placement" width="960"></a>
+<a href="images/v2.2.1/desktop.png"><img src="images/v2.2.1/desktop.png" alt="Glance LLM Usage 2.2.1 — Shared snapping and desktop placement" width="960"></a>
 
 Widget appearance controls:
 
-<a href="images/v2.2.0/appearance.png"><img src="images/v2.2.0/appearance.png" alt="Glance LLM Usage 2.2.0 — Appearance controls without a repeated heading" width="960"></a>
+<a href="images/v2.2.1/appearance.png"><img src="images/v2.2.1/appearance.png" alt="Glance LLM Usage 2.2.1 — Appearance controls without a repeated heading" width="960"></a>
 
 In-app updates:
 
-<a href="images/v2.2.0/updates.png"><img src="images/v2.2.0/updates.png" alt="Glance LLM Usage 2.2.0 — In-app updates" width="960"></a>
+<a href="images/v2.2.1/updates.png"><img src="images/v2.2.1/updates.png" alt="Glance LLM Usage 2.2.1 — In-app updates" width="960"></a>
 
 Compact desktop widget with sample usage:
 
-<a href="images/v2.2.0/widget.png"><img src="images/v2.2.0/widget.png" alt="Glance LLM Usage 2.2.0 — Compact desktop widget with sample usage" width="236"></a>
+<a href="images/v2.2.1/widget.png"><img src="images/v2.2.1/widget.png" alt="Glance LLM Usage 2.2.1 — Compact desktop widget with sample usage" width="236"></a>
 
 Quick menu:
 
-<a href="images/v2.2.0/menu.png"><img src="images/v2.2.0/menu.png" alt="Glance LLM Usage 2.2.0 — Essential right-click and tray actions" width="150"></a>
+<a href="images/v2.2.1/menu.png"><img src="images/v2.2.1/menu.png" alt="Glance LLM Usage 2.2.1 — Essential right-click and tray actions" width="150"></a>
 
 Help and setup:
 
-<a href="images/v2.2.0/support.png"><img src="images/v2.2.0/support.png" alt="Glance LLM Usage 2.2.0 — Setup guide and support tools" width="960"></a>
+<a href="images/v2.2.1/support.png"><img src="images/v2.2.1/support.png" alt="Glance LLM Usage 2.2.1 — Setup guide and support tools" width="960"></a>
 
 About and version information:
 
-<a href="images/v2.2.0/about.png"><img src="images/v2.2.0/about.png" alt="Glance LLM Usage 2.2.0 — About and version information" width="448"></a>
+<a href="images/v2.2.1/about.png"><img src="images/v2.2.1/about.png" alt="Glance LLM Usage 2.2.1 — About and version information" width="448"></a>
 
 ## Get started
 
@@ -53,7 +53,11 @@ About and version information:
 
 Windows 10/11 x64-compatible with .NET Framework 4.8. No API key or development tools required. The installer runs per user, with optional desktop/startup shortcuts. The app and installer are unsigned. SHA-256 checksums accompany every release.
 
-## New in 2.2.0
+## New in 2.2.1
+
+A new app icon: purple and mint usage bars on a black tile. Nothing else changes.
+
+## Included from 2.2.0
 
 Codex is now tracked only through **Sign in with ChatGPT**, which uses a pinned, hash-verified official OpenAI helper. The older option that read Codex through the Codex app's own `codex.exe` was retired: it ran whichever helper the Codex app happened to ship, which Glance could not verify. If you used it, the Codex row explains how to switch until you sign in with ChatGPT or stop Codex monitoring; your other settings are unchanged. **Existing desktop connections…** is now **Claude desktop sign-in…**.
 
