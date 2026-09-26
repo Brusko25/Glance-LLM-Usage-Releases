@@ -1,8 +1,8 @@
 {
-  "version": "2.1.2",
-  "download_url": "https://github.com/Brusko25/Glance-LLM-Usage-Releases/releases/download/v2.1.2/Glance-LLM-Usage-v2.1.2-Windows.zip",
-  "installer_url": "https://github.com/Brusko25/Glance-LLM-Usage-Releases/releases/download/v2.1.2/Glance-LLM-Usage-v2.1.2-Setup.exe",
-  "installer_sha256": "86e908d4114268875ea940c7de7b18ed0da64229f5e94dc2a886ffddb1221aa0",
-  "changelog": "Claude checks every 5 minutes and shows STALE only when readings are old; Codex checks every minute; checks pause while locked or asleep.",
-  "sha256": "8653fef80a0b124b64bdab750c18980b0aec2571f7dd6037f4ff89ad620af417"
+  "version": "2.1.3",
+  "download_url": "https://github.com/Brusko25/Glance-LLM-Usage-Releases/releases/download/v2.1.3/Glance-LLM-Usage-v2.1.3-Windows.zip",
+  "installer_url": "https://github.com/Brusko25/Glance-LLM-Usage-Releases/releases/download/v2.1.3/Glance-LLM-Usage-v2.1.3-Setup.exe",
+  "installer_sha256": "a180a1edba8d3a8a1e18e914499e99bc5d2c789e5199a009dfab77884eaf87df",
+  "changelog": "Claude keeps its sign-in token in memory between checks instead of decrypting it every time; includes the 2.1.2 refresh and STALE fixes.",
+  "sha256": "77cb83c09634d8b7ed00a468270b3c7d6bd57ac23b90828eeff6ed7d68a636d0"
 }
