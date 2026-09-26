@@ -7,20 +7,20 @@ Glance LLM Usage brings live subscription limits and saved provider websites int
 - Windows 10 or 11 on an x64-compatible computer, with Microsoft .NET Framework 4.8 or newer. macOS and Linux are not supported.
 - Internet access and a browser for provider websites and ChatGPT sign-in.
 - A ChatGPT account with Codex access for live Codex/Spark limits. You do not need the Codex desktop app when using browser sign-in.
-- Optional legacy connections: an existing signed-in Codex executable, or Claude desktop signed in on the same Windows account.
+- Optional: Claude desktop signed in on the same Windows account, for live Claude limits.
 
 No API key or developer billing setup is needed. Chat subscriptions and developer API billing are separate; this release focuses on subscriptions. Website access does not install provider apps or run models locally.
 
 ## Install
 
-1. Download **Glance-LLM-Usage-v2.1.3-Setup.exe** from the [latest release](https://github.com/Brusko25/Glance-LLM-Usage-Releases/releases/latest).
+1. Download **Glance-LLM-Usage-v2.2.0-Setup.exe** from the [latest release](https://github.com/Brusko25/Glance-LLM-Usage-Releases/releases/latest).
 2. Run the installer. It installs for your Windows account without requiring administrator access, normally in `%LOCALAPPDATA%\Programs\Glance LLM Usage`.
 3. Choose optional desktop and Windows sign-in startup shortcuts if wanted.
 4. Open Glance LLM Usage from the final installer page or Start menu. Complete Account setup.
 
 The app and installer are unsigned; Windows can identify the publisher as unknown. The release includes `SHA256SUMS.txt` for checking download integrity.
 
-For a portable copy, download **Glance-LLM-Usage-v2.1.3-Windows.zip**, extract all four files to a writable folder, and run `GlanceUsage.exe`. No compiler or developer tools are needed for either download. Avoid protected folders such as Program Files for a portable copy.
+For a portable copy, download **Glance-LLM-Usage-v2.2.0-Windows.zip**, extract all four files to a writable folder, and run `GlanceUsage.exe`. No compiler or developer tools are needed for either download. Avoid protected folders such as Program Files for a portable copy.
 
 ## Connect your accounts
 
@@ -42,16 +42,15 @@ Select the providers you use: **ChatGPT, Claude, Google Gemini, Grok, Perplexity
 
 These are website shortcuts, not connected accounts. They do not scrape browser sessions, read usage automatically, or display invented percentages. Browser-only automatic subscription tracking for providers other than ChatGPT/Codex is not available in this version. API usage/spending integration is not included.
 
-### Existing desktop connections (optional)
+### Claude desktop sign-in (optional)
 
-**Existing desktop connections…** retains the previous integrations and optional custom paths:
-
-- **Codex:** enable the existing installation option to use its signed-in `codex.exe`. This replaces Glance's browser connection for monitoring. An API-key-only login cannot provide ChatGPT subscription quotas. Blank paths use automatic detection.
-- **Claude:** open Claude desktop and sign in, then explicitly enable **Allow Claude usage reads using my desktop sign-in**. This authorizes local decryption of the signed-in Windows user's saved credential and its use only with Anthropic's usage endpoint. Glance keeps the selected token in memory between checks and never writes it to disk; it reads the saved sign-in again when Claude renews the token, when you switch accounts in Claude, or if Claude rejects it. Glance does not change Claude's authentication files. Claude handles renewal. Access starts off on a fresh install and can be disabled here.
+**Claude desktop sign-in…** turns on live Claude tracking. Open Claude desktop and sign in, then explicitly enable **Allow Claude usage reads using my desktop sign-in**. This authorizes local decryption of the signed-in Windows user's saved credential and its use only with Anthropic's usage endpoint. Glance keeps the selected token in memory between checks and never writes it to disk; it reads the saved sign-in again when Claude renews the token, when you switch accounts in Claude, or if Claude rejects it. Glance does not change Claude's authentication files. Claude handles renewal. Access starts off on a fresh install and can be disabled here.
 
 Custom Claude paths must contain `config.json` and `Local State`. Default locations are `%LOCALAPPDATA%\Packages\Claude_pzs8sxrjxfjjc\LocalCache\Roaming\Claude` for the Store version and `%APPDATA%\Claude` for classic installs. Claude's desktop cache and usage endpoint are internal interfaces and may require compatibility updates.
 
 Existing installations keep their saved monitoring choices. Every fresh installation starts with all local account access off.
+
+Version 2.2.0 retired the older option that read Codex through the Codex app's own `codex.exe`. It ran whichever helper the Codex app happened to ship, so Glance could not verify it. If you used it, the Codex row shows how to switch until you choose **Sign in with ChatGPT** in Account setup, or **Stop monitoring**. Your other settings are unchanged.
 
 ## Controls
 
@@ -76,7 +75,7 @@ The widget and tray share a short menu: **Options**, **Refresh now**, **Lock pos
 
 ## Refresh and meaning
 
-Codex readings reuse one helper process across refreshes. Exiting Glance closes its input so it can shut down normally; a helper that does not exit receives a forced stop only after a grace period. This applies to both browser and existing-desktop connections.
+Codex readings reuse one helper process across refreshes. Exiting Glance closes its input so it can shut down normally; a helper that does not exit receives a forced stop only after a grace period.
 
 Codex defaults to a fresh request every **minute** (choose 1, 2, 5 or 10 minutes). Claude defaults to every **5 minutes** (choose 5, 10 or 15 minutes): Claude's usage service answers more frequent checks with rate-limit errors. A Codex interval longer than the Claude interval also slows Claude. The timer starts after a request finishes. Scheduled refreshes pause while Windows is locked or asleep and run as soon as you unlock or wake the PC. Reset labels are recalculated each second and displayed in whole minutes/hours.
 
@@ -90,14 +89,14 @@ Codex reports the windows available for that account; a weekly-only limit is nor
 
 ## Troubleshooting
 
-- **ChatGPT/Codex offline:** open Manage providers and sign in again. Check internet access, available disk space for the helper, localhost browser callbacks, and Windows Credential Manager access. A helper download failure leaves existing monitoring choices unchanged. For a legacy desktop connection, check the Codex app sign-in and optional executable path.
+- **ChatGPT/Codex offline:** open Manage providers and sign in again. Check internet access, available disk space for the helper, localhost browser callbacks, and Windows Credential Manager access. A helper download failure leaves existing monitoring choices unchanged.
 - **Claude sign-in unavailable or expired:** open Claude desktop and use the signed-in app so it can renew its credential, then allow the next retry. Glance LLM Usage never rotates Claude's tokens itself.
 - **Multiple Claude organizations:** the widget will not silently select among multiple eligible organizations. Use the intended account in Claude; multi-organization selection is not supported in this release.
 - **Cooldown/stale:** wait for the provider's cooldown. Repeated refresh clicks do not bypass it.
 - **Cannot save settings:** check disk space and permissions. Read-only portable folders automatically use a per-user settings folder; find it under Options → Support. Updates still require write access to the application folder.
 - **A provider update breaks monitoring:** check this project's releases. Claude's usage endpoint and encrypted desktop cache are internal interfaces, so compatibility may require a widget update.
 
-Advanced environment overrides `GLANCE_CODEX_PATH` and `GLANCE_CLAUDE_DATA_DIR` are supported. Paths saved in Account setup take priority.
+The advanced environment override `GLANCE_CLAUDE_DATA_DIR` is supported. A Claude data folder saved in Account setup takes priority.
 
 ## Saved data, updates, and removal
 
@@ -116,7 +115,7 @@ The application and shortcuts are named **Glance LLM Usage**. Existing installat
 Open Options from the desktop/Start menu shortcut, right-click → Options, double-click the widget, or press Ctrl+O while the widget has focus. Closing Options keeps monitoring running; Quit app exits both.
 
 - **Overview:** live readings, Refresh usage, expandable Usage details, and saved provider websites.
-- **Accounts:** Account setup for browser sign-in, saved websites and optional desktop connections; Claude and Codex refresh timing. A website shortcut never indicates a live connection.
+- **Accounts:** Account setup for ChatGPT browser sign-in, saved websites and optional Claude desktop sign-in; Claude and Codex refresh timing. A website shortcut never indicates a live connection.
 - **Desktop:** always on top, position lock, monitor selection, reset position, startup and desktop shortcut controls.
 - **Appearance:** 75–200% widget sizing, Black/Graphite/Midnight backgrounds, Mint/Lavender/Amber Codex accents, 70–100% opacity, used/remaining percentages.
 - **Updates:** automatic-check preference and in-app update installation.
@@ -130,4 +129,4 @@ Automatic checks run shortly after startup and daily, and can be disabled in Opt
 
 Installed copies update in their existing folder and retain startup choices. Portable copies need a writable application folder. No administrator rights are required for normal per-user installations. Existing v1.0.3 users need to install this release once using the downloaded installer; subsequent updates use the in-app installer.
 
-This remains a Windows application: Windows 10/11 on x64-compatible systems with .NET Framework 4.8. macOS and Linux are not supported. Provider subscription eligibility still applies; only optional legacy connections require provider desktop apps.
+This remains a Windows application: Windows 10/11 on x64-compatible systems with .NET Framework 4.8. macOS and Linux are not supported. Provider subscription eligibility still applies; only the optional Claude connection requires a provider desktop app.

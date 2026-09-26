@@ -6,43 +6,43 @@ A compact Windows app for **subscription limits and your favorite AI providers**
 
 ## Screenshots
 
-Glance LLM Usage 2.1.3, captured from the actual release build with illustrative values and offline previews. Click any image for full size.
+Glance LLM Usage 2.2.0, captured from the actual release build with illustrative values and offline previews. Click any image for full size.
 
 Options overview:
 
-<a href="images/v2.1.3/options.png"><img src="images/v2.1.3/options.png" alt="Glance LLM Usage 2.1.3 — Options overview" width="960"></a>
+<a href="images/v2.2.0/options.png"><img src="images/v2.2.0/options.png" alt="Glance LLM Usage 2.2.0 — Options overview" width="960"></a>
 
 Provider accounts and supported connection types:
 
-<a href="images/v2.1.3/accounts.png"><img src="images/v2.1.3/accounts.png" alt="Glance LLM Usage 2.1.3 — Provider accounts and connection support" width="960"></a>
+<a href="images/v2.2.0/accounts.png"><img src="images/v2.2.0/accounts.png" alt="Glance LLM Usage 2.2.0 — Provider accounts and connection support" width="960"></a>
 
 Shared snapping and desktop placement:
 
-<a href="images/v2.1.3/desktop.png"><img src="images/v2.1.3/desktop.png" alt="Glance LLM Usage 2.1.3 — Shared snapping and desktop placement" width="960"></a>
+<a href="images/v2.2.0/desktop.png"><img src="images/v2.2.0/desktop.png" alt="Glance LLM Usage 2.2.0 — Shared snapping and desktop placement" width="960"></a>
 
 Widget appearance controls:
 
-<a href="images/v2.1.3/appearance.png"><img src="images/v2.1.3/appearance.png" alt="Glance LLM Usage 2.1.3 — Appearance controls without a repeated heading" width="960"></a>
+<a href="images/v2.2.0/appearance.png"><img src="images/v2.2.0/appearance.png" alt="Glance LLM Usage 2.2.0 — Appearance controls without a repeated heading" width="960"></a>
 
 In-app updates:
 
-<a href="images/v2.1.3/updates.png"><img src="images/v2.1.3/updates.png" alt="Glance LLM Usage 2.1.3 — In-app updates" width="960"></a>
+<a href="images/v2.2.0/updates.png"><img src="images/v2.2.0/updates.png" alt="Glance LLM Usage 2.2.0 — In-app updates" width="960"></a>
 
 Compact desktop widget with sample usage:
 
-<a href="images/v2.1.3/widget.png"><img src="images/v2.1.3/widget.png" alt="Glance LLM Usage 2.1.3 — Compact desktop widget with sample usage" width="236"></a>
+<a href="images/v2.2.0/widget.png"><img src="images/v2.2.0/widget.png" alt="Glance LLM Usage 2.2.0 — Compact desktop widget with sample usage" width="236"></a>
 
 Quick menu:
 
-<a href="images/v2.1.3/menu.png"><img src="images/v2.1.3/menu.png" alt="Glance LLM Usage 2.1.3 — Essential right-click and tray actions" width="150"></a>
+<a href="images/v2.2.0/menu.png"><img src="images/v2.2.0/menu.png" alt="Glance LLM Usage 2.2.0 — Essential right-click and tray actions" width="150"></a>
 
 Help and setup:
 
-<a href="images/v2.1.3/support.png"><img src="images/v2.1.3/support.png" alt="Glance LLM Usage 2.1.3 — Setup guide and support tools" width="960"></a>
+<a href="images/v2.2.0/support.png"><img src="images/v2.2.0/support.png" alt="Glance LLM Usage 2.2.0 — Setup guide and support tools" width="960"></a>
 
 About and version information:
 
-<a href="images/v2.1.3/about.png"><img src="images/v2.1.3/about.png" alt="Glance LLM Usage 2.1.3 — About and version information" width="448"></a>
+<a href="images/v2.2.0/about.png"><img src="images/v2.2.0/about.png" alt="Glance LLM Usage 2.2.0 — About and version information" width="448"></a>
 
 ## Get started
 
@@ -53,11 +53,13 @@ About and version information:
 
 Windows 10/11 x64-compatible with .NET Framework 4.8. No API key or development tools required. The installer runs per user, with optional desktop/startup shortcuts. The app and installer are unsigned. SHA-256 checksums accompany every release.
 
-## New in 2.1.3
+## New in 2.2.0
+
+Codex is now tracked only through **Sign in with ChatGPT**, which uses a pinned, hash-verified official OpenAI helper. The older option that read Codex through the Codex app's own `codex.exe` was retired: it ran whichever helper the Codex app happened to ship, which Glance could not verify. If you used it, the Codex row explains how to switch until you sign in with ChatGPT or stop Codex monitoring; your other settings are unchanged. **Existing desktop connections…** is now **Claude desktop sign-in…**.
+
+## Included from 2.1.3 and 2.1.2
 
 Claude checks keep the sign-in token in memory instead of decrypting Claude's saved sign-in every time. Decrypting calls Windows' security service (lsass), so Glance now does that about once per token instead of on every check. The token is read again when Claude renews it, when you switch accounts in Claude, when it has five minutes or less left, or if Claude rejects it, and it is never written to disk.
-
-## Included from 2.1.2
 
 Claude no longer shows **STALE** almost all the time. Claude's usage service rejects checks that come too often, and checking every minute kept running into that limit. Claude now checks every **5 minutes** by default (10 or 15 minutes under **Accounts → Refresh timing**), and **STALE** appears only when the numbers shown are actually old. A single refused check keeps the previous reading; hover over the widget to see why.
 
@@ -71,13 +73,13 @@ The widget and tray share Options, Refresh, Lock/Unlock position, Check for upda
 
 A subscription-first provider hub adds browser sign-in for ChatGPT/Codex and saved websites for ChatGPT, Claude, Gemini, Grok, Perplexity, DeepSeek, Mistral Le Chat, and Microsoft Copilot. Live connections and website shortcuts have distinct labels. No API key or developer billing setup is required; API usage/spending is not tracked.
 
-The official OpenAI helper is downloaded only when you sign in, verified against pinned hashes, and given a separate account profile with Windows Credential Manager storage. Existing Codex and optional Claude desktop connections remain available. Fresh installations start with local account access off and can finish setup without connecting anything.
+The official OpenAI helper is downloaded only when you sign in, verified against pinned hashes, and given a separate account profile with Windows Credential Manager storage. Claude live tracking uses the Claude desktop app's sign-in when you allow it. The older option that read Codex through the Codex app's own codex.exe was retired in 2.2.0. Fresh installations start with local account access off and can finish setup without connecting anything.
 
 Choose **Install update** to download, verify, install and restart with your settings preserved. The full Options window includes desktop placement, appearance, startup, accounts, and support. Existing installations retain their settings and monitoring choices.
 
 ## What it shows
 
-- Codex and Spark limits that your ChatGPT account exposes, via browser sign-in or an existing Codex installation. These are not every ChatGPT chat model's limits.
+- Codex and Spark limits that your ChatGPT account exposes, via ChatGPT browser sign-in. These are not every ChatGPT chat model's limits.
 - Optional Claude five-hour and overall weekly limits through an existing desktop sign-in.
 - Saved provider websites on Overview; website shortcuts do not generate live quota readings.
 - Remaining or used percentages, progress bars, and reset countdowns.

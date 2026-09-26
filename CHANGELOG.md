@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.2.0 — 2026-09-25
+
+- Retired the option that read Codex through the Codex app's own `codex.exe`. It ran whichever helper the Codex app shipped, which Glance could not verify. Codex is now tracked only through **Sign in with ChatGPT**, which uses a pinned, hash-verified official helper. If you used the old option, the Codex row explains how to switch until you sign in with ChatGPT or stop Codex monitoring; nothing else changes and your settings file is not rewritten.
+- **Existing desktop connections…** is now **Claude desktop sign-in…** and only contains the Claude option and its data folder.
+- The `GLANCE_CODEX_PATH` environment override is no longer used.
+
 ## 2.1.3 — 2026-09-25
 
 - Claude checks keep the sign-in token in memory instead of decrypting Claude's saved sign-in every time. Decrypting calls Windows' security service (lsass). The cause of the September 23 LSASS crash is still unconfirmed, but Glance now makes that call about once per token instead of on every check. The token is read again when Claude renews it, when you switch accounts in Claude, when it has five minutes or less left, or if Claude rejects it. It is never written to disk.
