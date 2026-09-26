@@ -13,14 +13,14 @@ No API key or developer billing setup is needed. Chat subscriptions and develope
 
 ## Install
 
-1. Download **Glance-LLM-Usage-v2.1.2-Setup.exe** from the [latest release](https://github.com/Brusko25/Glance-LLM-Usage-Releases/releases/latest).
+1. Download **Glance-LLM-Usage-v2.1.3-Setup.exe** from the [latest release](https://github.com/Brusko25/Glance-LLM-Usage-Releases/releases/latest).
 2. Run the installer. It installs for your Windows account without requiring administrator access, normally in `%LOCALAPPDATA%\Programs\Glance LLM Usage`.
 3. Choose optional desktop and Windows sign-in startup shortcuts if wanted.
 4. Open Glance LLM Usage from the final installer page or Start menu. Complete Account setup.
 
 The app and installer are unsigned; Windows can identify the publisher as unknown. The release includes `SHA256SUMS.txt` for checking download integrity.
 
-For a portable copy, download **Glance-LLM-Usage-v2.1.2-Windows.zip**, extract all four files to a writable folder, and run `GlanceUsage.exe`. No compiler or developer tools are needed for either download. Avoid protected folders such as Program Files for a portable copy.
+For a portable copy, download **Glance-LLM-Usage-v2.1.3-Windows.zip**, extract all four files to a writable folder, and run `GlanceUsage.exe`. No compiler or developer tools are needed for either download. Avoid protected folders such as Program Files for a portable copy.
 
 ## Connect your accounts
 
@@ -47,7 +47,7 @@ These are website shortcuts, not connected accounts. They do not scrape browser 
 **Existing desktop connections…** retains the previous integrations and optional custom paths:
 
 - **Codex:** enable the existing installation option to use its signed-in `codex.exe`. This replaces Glance's browser connection for monitoring. An API-key-only login cannot provide ChatGPT subscription quotas. Blank paths use automatic detection.
-- **Claude:** open Claude desktop and sign in, then explicitly enable **Allow Claude usage reads using my desktop sign-in**. This authorizes local decryption of the signed-in Windows user's saved credential and its use only with Anthropic's usage endpoint. Glance does not save a copy or change Claude's authentication files. Claude handles renewal. Access starts off on a fresh install and can be disabled here.
+- **Claude:** open Claude desktop and sign in, then explicitly enable **Allow Claude usage reads using my desktop sign-in**. This authorizes local decryption of the signed-in Windows user's saved credential and its use only with Anthropic's usage endpoint. Glance keeps the selected token in memory between checks and never writes it to disk; it reads the saved sign-in again when Claude renews the token, when you switch accounts in Claude, or if Claude rejects it. Glance does not change Claude's authentication files. Claude handles renewal. Access starts off on a fresh install and can be disabled here.
 
 Custom Claude paths must contain `config.json` and `Local State`. Default locations are `%LOCALAPPDATA%\Packages\Claude_pzs8sxrjxfjjc\LocalCache\Roaming\Claude` for the Store version and `%APPDATA%\Claude` for classic installs. Claude's desktop cache and usage endpoint are internal interfaces and may require compatibility updates.
 

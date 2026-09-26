@@ -6,43 +6,43 @@ A compact Windows app for **subscription limits and your favorite AI providers**
 
 ## Screenshots
 
-Glance LLM Usage 2.1.2, captured from the actual release build with illustrative values and offline previews. Click any image for full size.
+Glance LLM Usage 2.1.3, captured from the actual release build with illustrative values and offline previews. Click any image for full size.
 
 Options overview:
 
-<a href="images/v2.1.2/options.png"><img src="images/v2.1.2/options.png" alt="Glance LLM Usage 2.1.2 — Options overview" width="960"></a>
+<a href="images/v2.1.3/options.png"><img src="images/v2.1.3/options.png" alt="Glance LLM Usage 2.1.3 — Options overview" width="960"></a>
 
 Provider accounts and supported connection types:
 
-<a href="images/v2.1.2/accounts.png"><img src="images/v2.1.2/accounts.png" alt="Glance LLM Usage 2.1.2 — Provider accounts and connection support" width="960"></a>
+<a href="images/v2.1.3/accounts.png"><img src="images/v2.1.3/accounts.png" alt="Glance LLM Usage 2.1.3 — Provider accounts and connection support" width="960"></a>
 
 Shared snapping and desktop placement:
 
-<a href="images/v2.1.2/desktop.png"><img src="images/v2.1.2/desktop.png" alt="Glance LLM Usage 2.1.2 — Shared snapping and desktop placement" width="960"></a>
+<a href="images/v2.1.3/desktop.png"><img src="images/v2.1.3/desktop.png" alt="Glance LLM Usage 2.1.3 — Shared snapping and desktop placement" width="960"></a>
 
 Widget appearance controls:
 
-<a href="images/v2.1.2/appearance.png"><img src="images/v2.1.2/appearance.png" alt="Glance LLM Usage 2.1.2 — Appearance controls without a repeated heading" width="960"></a>
+<a href="images/v2.1.3/appearance.png"><img src="images/v2.1.3/appearance.png" alt="Glance LLM Usage 2.1.3 — Appearance controls without a repeated heading" width="960"></a>
 
 In-app updates:
 
-<a href="images/v2.1.2/updates.png"><img src="images/v2.1.2/updates.png" alt="Glance LLM Usage 2.1.2 — In-app updates" width="960"></a>
+<a href="images/v2.1.3/updates.png"><img src="images/v2.1.3/updates.png" alt="Glance LLM Usage 2.1.3 — In-app updates" width="960"></a>
 
 Compact desktop widget with sample usage:
 
-<a href="images/v2.1.2/widget.png"><img src="images/v2.1.2/widget.png" alt="Glance LLM Usage 2.1.2 — Compact desktop widget with sample usage" width="236"></a>
+<a href="images/v2.1.3/widget.png"><img src="images/v2.1.3/widget.png" alt="Glance LLM Usage 2.1.3 — Compact desktop widget with sample usage" width="236"></a>
 
 Quick menu:
 
-<a href="images/v2.1.2/menu.png"><img src="images/v2.1.2/menu.png" alt="Glance LLM Usage 2.1.2 — Essential right-click and tray actions" width="150"></a>
+<a href="images/v2.1.3/menu.png"><img src="images/v2.1.3/menu.png" alt="Glance LLM Usage 2.1.3 — Essential right-click and tray actions" width="150"></a>
 
 Help and setup:
 
-<a href="images/v2.1.2/support.png"><img src="images/v2.1.2/support.png" alt="Glance LLM Usage 2.1.2 — Setup guide and support tools" width="960"></a>
+<a href="images/v2.1.3/support.png"><img src="images/v2.1.3/support.png" alt="Glance LLM Usage 2.1.3 — Setup guide and support tools" width="960"></a>
 
 About and version information:
 
-<a href="images/v2.1.2/about.png"><img src="images/v2.1.2/about.png" alt="Glance LLM Usage 2.1.2 — About and version information" width="448"></a>
+<a href="images/v2.1.3/about.png"><img src="images/v2.1.3/about.png" alt="Glance LLM Usage 2.1.3 — About and version information" width="448"></a>
 
 ## Get started
 
@@ -53,7 +53,11 @@ About and version information:
 
 Windows 10/11 x64-compatible with .NET Framework 4.8. No API key or development tools required. The installer runs per user, with optional desktop/startup shortcuts. The app and installer are unsigned. SHA-256 checksums accompany every release.
 
-## New in 2.1.2
+## New in 2.1.3
+
+Claude checks keep the sign-in token in memory instead of decrypting Claude's saved sign-in every time. Decrypting calls Windows' security service (lsass), so Glance now does that about once per token instead of on every check. The token is read again when Claude renews it, when you switch accounts in Claude, when it has five minutes or less left, or if Claude rejects it, and it is never written to disk.
+
+## Included from 2.1.2
 
 Claude no longer shows **STALE** almost all the time. Claude's usage service rejects checks that come too often, and checking every minute kept running into that limit. Claude now checks every **5 minutes** by default (10 or 15 minutes under **Accounts → Refresh timing**), and **STALE** appears only when the numbers shown are actually old. A single refused check keeps the previous reading; hover over the widget to see why.
 

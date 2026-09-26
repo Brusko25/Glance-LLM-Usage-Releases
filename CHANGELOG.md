@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.1.3 — 2026-09-25
+
+- Claude checks keep the sign-in token in memory instead of decrypting Claude's saved sign-in every time. Decrypting calls Windows' security service (lsass). The cause of the September 23 LSASS crash is still unconfirmed, but Glance now makes that call about once per token instead of on every check. The token is read again when Claude renews it, when you switch accounts in Claude, when it has five minutes or less left, or if Claude rejects it. It is never written to disk.
+
 ## 2.1.2 — 2026-09-25
 
 - Claude no longer shows STALE almost all the time. Claude's usage service rejects frequent checks (HTTP 429), and checking every minute kept hitting that limit. Claude now checks every 5 minutes by default, with 10 and 15 minutes available under Accounts → Refresh timing.
