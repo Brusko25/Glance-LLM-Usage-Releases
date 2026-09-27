@@ -1,5 +1,7 @@
 # Glance LLM Usage
 
+> **Final release.** Glance LLM Usage 2.2.1 is the last standalone version. It keeps working, and the in-app update check won't offer anything newer. Glance LLM Usage continues as a tile in [Glance Platform](https://github.com/Brusko25/Glance-Platform-Releases).
+
 A compact Windows app for **subscription limits and your favorite AI providers**. Browser sign-in supports live Codex/Spark limits; saved website shortcuts keep other major providers within reach. True-black background, a subtle outline matching Glance Finance, and the essential percentages and reset countdowns.
 
 **[Download the Windows installer](https://github.com/Brusko25/Glance-LLM-Usage-Releases/releases/latest)** · **[Setup guide](USER_GUIDE.md)** · **[Changelog](CHANGELOG.md)** · **[Report an issue](https://github.com/Brusko25/Glance-LLM-Usage-Releases/issues)**
